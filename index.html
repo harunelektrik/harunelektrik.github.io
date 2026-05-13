@@ -511,67 +511,6 @@
       .quote-box { border-radius: 22px; }
       .wa-float { right: 16px; bottom: 16px; width: 56px; height: 56px; }
     }
-
-    /* ── Yorum Bölümü ── */
-    .comment-form-wrap { margin-bottom: 40px; }
-    .comment-form-box {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      display: grid;
-      gap: 14px;
-    }
-    .comment-form-box input,
-    .comment-form-box textarea {
-      width: 100%;
-      padding: 14px 18px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      font-family: Inter, sans-serif;
-      font-size: .95rem;
-      color: var(--text);
-      background: var(--surface);
-      outline: none;
-      transition: border-color .2s;
-      resize: none;
-    }
-    .comment-form-box input:focus,
-    .comment-form-box textarea:focus { border-color: var(--gold); }
-    .comment-form-box button {
-      min-height: 46px;
-      padding: 0 26px;
-      border-radius: 999px;
-      border: none;
-      background: var(--navy);
-      color: #fff;
-      font-family: Inter, sans-serif;
-      font-weight: 800;
-      font-size: .9rem;
-      cursor: pointer;
-      transition: transform .2s, box-shadow .2s;
-      box-shadow: var(--shadow-sm);
-      white-space: nowrap;
-    }
-    .comment-form-box button:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
-    .comment-form-box button:disabled { opacity: .5; cursor: not-allowed; transform: none; }
-    .cmt-status { font-size: .85rem; color: var(--muted); font-weight: 600; }
-    .cmt-status.error { color: #d92d20; }
-    .cmt-status.success { color: #12b76a; }
-    .cmt-list { display: grid; gap: 16px; }
-    .cmt-item {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 22px 24px;
-      box-shadow: var(--shadow-sm);
-    }
-    .cmt-item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; gap: 12px; flex-wrap: wrap; }
-    .cmt-item-name { font-weight: 800; color: var(--navy); font-size: .98rem; }
-    .cmt-item-date { font-size: .78rem; color: var(--muted); font-weight: 600; }
-    .cmt-item-text { color: #344054; font-size: .93rem; line-height: 1.65; }
-    .cmt-empty { text-align: center; color: var(--muted); padding: 40px 0; font-size: .95rem; }
   </style>
 </head>
 <body>
@@ -595,7 +534,6 @@
         <li><a href="#videolar">Videolar</a></li>
         <li><a href="#solar">Solar</a></li>
         <li><a href="#iletisim">İletişim</a></li>
-        <li><a href="#yorumlar">Yorumlar</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -775,33 +713,6 @@
     </section>
   </main>
 
-  <section id="yorumlar" style="background:var(--surface);padding:88px 0;">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="section-label">Müşteri Görüşleri</div>
-          <h2 class="section-title">Yorumlar</h2>
-        </div>
-        <p class="section-sub">Deneyimlerinizi bizimle paylaşın. Her kullanıcı 15 dakikada bir yorum gönderebilir.</p>
-      </div>
-
-      <!-- Yorum Formu -->
-      <div class="comment-form-wrap reveal">
-        <div class="comment-form-box">
-          <input type="text" id="cmtName" placeholder="Adınız" maxlength="40" />
-          <textarea id="cmtText" placeholder="Yorumunuzu yazın..." maxlength="400" rows="4"></textarea>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
-            <span id="cmtStatus" class="cmt-status"></span>
-            <button id="cmtBtn" onclick="submitComment()">Yorum Gönder</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Yorum Listesi -->
-      <div id="cmtList" class="cmt-list"></div>
-    </div>
-  </section>
-
   <footer>
     <div class="container footer-inner">
       <div class="footer-brand">Harun Yapı Teknolojileri<span>Elektrik • Aydınlatma • Solar • Güvenlik</span></div>
@@ -844,107 +755,6 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
-
-    /* ── Yorum Sistemi ── */
-    const STORAGE_KEY = 'harun_yorumlar';
-    const COOLDOWN_KEY = 'harun_yorum_son';
-    const COOLDOWN_MS = 15 * 60 * 1000; // 15 dakika
-
-    function loadComments() {
-      try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
-      catch { return []; }
-    }
-
-    function saveComments(list) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
-    }
-
-    function formatDate(ts) {
-      const d = new Date(ts);
-      return d.toLocaleDateString('tr-TR', { day:'2-digit', month:'long', year:'numeric' })
-           + ' ' + d.toLocaleTimeString('tr-TR', { hour:'2-digit', minute:'2-digit' });
-    }
-
-    function renderComments() {
-      const list = loadComments();
-      const el = document.getElementById('cmtList');
-      if (!list.length) {
-        el.innerHTML = '<p class="cmt-empty">Henüz yorum yok. İlk yorumu siz bırakın!</p>';
-        return;
-      }
-      el.innerHTML = list.slice().reverse().map(c => `
-        <div class="cmt-item reveal">
-          <div class="cmt-item-header">
-            <span class="cmt-item-name">👤 ${escHtml(c.name)}</span>
-            <span class="cmt-item-date">${formatDate(c.ts)}</span>
-          </div>
-          <p class="cmt-item-text">${escHtml(c.text)}</p>
-        </div>
-      `).join('');
-      el.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    }
-
-    function escHtml(s) {
-      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-    }
-
-    function setStatus(msg, type) {
-      const el = document.getElementById('cmtStatus');
-      el.textContent = msg;
-      el.className = 'cmt-status ' + (type || '');
-    }
-
-    function checkCooldown() {
-      const last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0');
-      const diff = Date.now() - last;
-      if (diff < COOLDOWN_MS) {
-        const kalan = Math.ceil((COOLDOWN_MS - diff) / 60000);
-        return kalan;
-      }
-      return 0;
-    }
-
-    function submitComment() {
-      const name = document.getElementById('cmtName').value.trim();
-      const text = document.getElementById('cmtText').value.trim();
-
-      if (!name) { setStatus('Lütfen adınızı girin.', 'error'); return; }
-      if (!text || text.length < 5) { setStatus('Yorum en az 5 karakter olmalı.', 'error'); return; }
-
-      const kalan = checkCooldown();
-      if (kalan > 0) {
-        setStatus(`Tekrar yorum göndermek için ${kalan} dakika bekleyin.`, 'error');
-        return;
-      }
-
-      const list = loadComments();
-      list.push({ name, text, ts: Date.now() });
-      saveComments(list);
-      localStorage.setItem(COOLDOWN_KEY, Date.now().toString());
-
-      document.getElementById('cmtName').value = '';
-      document.getElementById('cmtText').value = '';
-      setStatus('Yorumunuz eklendi!', 'success');
-      renderComments();
-
-      setTimeout(() => setStatus(''), 3000);
-    }
-
-    // Sayfa açılışında yorumları ve kalan süreyi göster
-    renderComments();
-
-    // Cooldown geri sayımı
-    (function tickCooldown() {
-      const kalan = checkCooldown();
-      if (kalan > 0) {
-        document.getElementById('cmtBtn').disabled = true;
-        setStatus(`Yeni yorum için ${kalan} dakika kaldı.`);
-      } else {
-        document.getElementById('cmtBtn').disabled = false;
-        if (document.getElementById('cmtStatus').textContent.includes('dakika')) setStatus('');
-      }
-      setTimeout(tickCooldown, 30000);
-    })();
   </script>
 </body>
 </html>
