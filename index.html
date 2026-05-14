@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harun Yapı Teknolojileri | Elektrik, Aydınlatma, Solar ve Güvenlik</title>
+  <title>Elektrik, Aydınlatma, Solar ve Güvenlik Sistemleri</title>
   <meta name="description" content="Ereğli ve çevresinde elektrik tesisatı, aydınlatma, solar enerji, kamera ve güvenlik sistemleri için profesyonel çözümler. 0545 607 4507" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -296,7 +296,11 @@
     .service-card li::before { content: "✓"; color: #12b76a; font-weight: 900; }
 
     .projects, .why { background: var(--surface); }
-    .photos-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; }
+    .photos-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
+      gap: 18px; 
+    }
     .photo-item {
       position: relative;
       min-height: 360px;
@@ -324,6 +328,12 @@
     }
     .photo-caption strong { display: block; font-size: 1.08rem; }
     .photo-caption span { display: block; margin-top: 4px; color: rgba(255,255,255,.78); font-size: .9rem; }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+    }
 
     .videos-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
     .video-card {
@@ -493,6 +503,7 @@
       .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .videos-grid, .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       #urunler .container > div { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+      .photos-grid, .projects-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
     }
 
     @media (max-width: 700px) {
@@ -503,7 +514,7 @@
       .brand-title { font-size: 1rem; }
       .hero { padding: 54px 0 44px; }
       .hero-actions .btn { width: 100%; }
-      .trust-row, .services-grid, .photos-grid, .videos-grid, .why-grid { grid-template-columns: 1fr; }
+      .trust-row, .services-grid, .photos-grid, .videos-grid, .why-grid, .projects-grid { grid-template-columns: 1fr; }
       #urunler .container > div { grid-template-columns: 1fr !important; }
       .section-head { display: block; }
       .section-sub { margin-top: 12px; }
@@ -525,14 +536,14 @@
 
   <nav id="navbar">
     <div class="nav-inner">
-      <a class="brand" href="#hero" aria-label="Harun Yapı Teknolojileri ana sayfa">
+      <a class="brand" href="#hero" aria-label="Ana sayfa">
         <div class="brand-mark">⚡</div>
-        <div class="brand-title">Harun Yapı Teknolojileri <span>Elektrik & Aydınlatma</span></div>
+        <div class="brand-title">Elektrik & Aydınlatma <span>Profesyonel Çözümler</span></div>
       </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#hizmetler">Hizmetler</a></li>
-        <li><a href="#projeler">Projeler</a></li>
+        <li><a href="#projelerimiz">Projelerimiz</a></li>
         <li><a href="#videolar">Videolar</a></li>
         <li><a href="#solar">Solar</a></li>
         <li><a href="#iletisim">İletişim</a></li>
@@ -552,10 +563,10 @@
       <div class="hero-copy">
         <div class="eyebrow">Ereğli ve çevresinde profesyonel hizmet</div>
         <h1>Güvenli altyapı, estetik aydınlatma ve <span>akıllı enerji</span> çözümleri.</h1>
-        <p class="hero-lead">Harun Yapı Teknolojileri; elektrik tesisatı, modern aydınlatma, kamera sistemleri ve solar enerji projelerinde anahtar teslim, temiz ve güvenilir işçilik sunar.</p>
+        <p class="hero-lead">Elektrik tesisatı, modern aydınlatma, kamera sistemleri ve solar enerji projelerinde anahtar teslim, temiz ve güvenilir işçilik.</p>
         <div class="hero-actions">
           <a href="#iletisim" class="btn btn-gold">Ücretsiz Teklif Al</a>
-          <a href="#projeler" class="btn btn-outline">Projeleri İncele</a>
+          <a href="#projelerimiz" class="btn btn-outline">Projeleri İncele</a>
         </div>
         <div class="trust-row">
         </div>
@@ -605,6 +616,57 @@
       </div>
     </section>
 
+    <!-- YENİ PROJELERİMİZ BÖLÜMÜ - SAYFANIN ORTASINA EKLENDİ -->
+    <section class="projects" id="projelerimiz">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-label">Projelerimiz</div>
+            <h2 class="section-title">Tamamlanan projeler</h2>
+          </div>
+          <p class="section-sub">Elektrik tesisatı, aydınlatma ve güvenlik sistemleri uygulamalarından seçilmiş projeler.</p>
+        </div>
+
+        <div class="projects-grid">
+          <figure class="photo-item reveal">
+            <img src="resim1.jpeg" alt="Tamamlanan proje görseli 1" loading="lazy" />
+            <figcaption class="photo-caption">
+              <strong>Proje 1</strong>
+              <span>Elektrik ve aydınlatma uygulaması</span>
+            </figcaption>
+          </figure>
+          <figure class="photo-item reveal">
+            <img src="resim2.jpeg" alt="Tamamlanan proje görseli 2" loading="lazy" />
+            <figcaption class="photo-caption">
+              <strong>Proje 2</strong>
+              <span>Modern aydınlatma çözümü</span>
+            </figcaption>
+          </figure>
+          <figure class="photo-item reveal">
+            <img src="resim3.jpeg" alt="Tamamlanan proje görseli 3" loading="lazy" />
+            <figcaption class="photo-caption">
+              <strong>Proje 3</strong>
+              <span>Güvenlik sistemi montajı</span>
+            </figcaption>
+          </figure>
+          <figure class="photo-item reveal">
+            <img src="resim4.jpeg" alt="Tamamlanan proje görseli 4" loading="lazy" />
+            <figcaption class="photo-caption">
+              <strong>Proje 4</strong>
+              <span>Temiz tesisat uygulaması</span>
+            </figcaption>
+          </figure>
+          <figure class="photo-item reveal">
+            <img src="resim5.jpeg" alt="Tamamlanan proje görseli 5" loading="lazy" />
+            <figcaption class="photo-caption">
+              <strong>Proje 5</strong>
+              <span>Kapsamlı sistem kurulumu</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="projects" id="projeler">
       <div class="container">
         <div class="section-head">
@@ -617,11 +679,11 @@
 
         <div class="photos-grid">
           <figure class="photo-item reveal">
-            <img src="proje-1.jpg" alt="Harun Yapı Teknolojileri tamamlanan proje görseli 1" />
+            <img src="proje-1.jpg" alt="Tamamlanan proje görseli 1" />
             <figcaption class="photo-caption"><strong>Tamamlanan Proje</strong><span>Elektrik ve aydınlatma uygulaması</span></figcaption>
           </figure>
           <figure class="photo-item reveal">
-            <img src="proje-2.jpg" alt="Harun Yapı Teknolojileri tamamlanan proje görseli 2" />
+            <img src="proje-2.jpg" alt="Tamamlanan proje görseli 2" />
             <figcaption class="photo-caption"><strong>Tamamlanan Proje</strong><span>Modern ve temiz uygulama</span></figcaption>
           </figure>
         </div>
@@ -676,7 +738,7 @@
         <div class="section-head">
           <div>
             <div class="section-label">Farkımız</div>
-            <h2 class="section-title">Neden Harun Yapı Teknolojileri?</h2>
+            <h2 class="section-title">Neden biz?</h2>
           </div>
           <p class="section-sub">Teknik bilgi, temiz işçilik ve hızlı iletişimle proje sürecini baştan sona yönetiyoruz.</p>
         </div>
@@ -708,7 +770,7 @@
         <aside class="quote-box">
           <h3>Hızlı teklif alın</h3>
           <p>WhatsApp üzerinden projenizi kısaca anlatın, uygun çözüm ve fiyatlandırma için iletişime geçelim.</p>
-          <a href="https://wa.me/905456074507?text=Merhaba Harun Bey, bilgi almak istiyorum." class="btn btn-whatsapp">WhatsApp'tan Yaz</a>
+          <a href="https://wa.me/905456074507?text=Merhaba, bilgi almak istiyorum." class="btn btn-whatsapp">WhatsApp'tan Yaz</a>
           <a href="tel:05456074507" class="btn btn-outline" style="margin-top:12px;background:transparent;color:#fff;border-color:rgba(255,255,255,.28)">📞 Hemen Ara</a>
         </aside>
       </div>
@@ -717,10 +779,11 @@
 
   <footer>
     <div class="container footer-inner">
-      <div class="footer-brand">Harun Yapı Teknolojileri<span>Elektrik • Aydınlatma • Solar • Güvenlik</span></div>
-      <div>© 2026 Harun Yapı Teknolojileri. Tüm hakları saklıdır.</div>
+      <div class="footer-brand">Elektrik • Aydınlatma • Solar • Güvenlik<span>Profesyonel Çözümler</span></div>
+      <div>© 2026 Tüm hakları saklıdır.</div>
       <div class="footer-links">
         <a href="#hizmetler">Hizmetler</a>
+        <a href="#projelerimiz">Projelerimiz</a>
         <a href="#videolar">Videolar</a>
         <a href="https://www.instagram.com/harunelektrikaydinlatma00/" target="_blank" rel="noopener">Instagram</a>
         <a href="tel:05456074507">Ara</a>
