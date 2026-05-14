@@ -301,15 +301,6 @@
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
       gap: 18px; 
     }
-    .photo-item {
-      position: relative;
-      min-height: 360px;
-      border-radius: 28px;
-      overflow: hidden;
-      background: #e5e7eb;
-      border: 1px solid #e5e7eb;
-      box-shadow: var(--shadow-sm);
-    }
     .photo-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .55s ease; }
     .photo-item:hover img { transform: scale(1.055); }
     .photo-item::after {
@@ -543,6 +534,7 @@
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#hizmetler">Hizmetler</a></li>
+        <li><a href="#urunler">Ürünler & Sistemler</a></li>
         <li><a href="#projelerimiz">Projelerimiz</a></li>
         <li><a href="#videolar">Videolar</a></li>
         <li><a href="#solar">Solar</a></li>
@@ -616,119 +608,91 @@
       </div>
     </section>
 
-    <!-- YENİ PROJELERİMİZ BÖLÜMÜ - SAYFANIN ORTASINA EKLENDİ -->
+    <section id="urunler" class="services" style="background: var(--surface-2);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-label">Geniş Ürün Yelpazesi</div>
+            <h2 class="section-title">Sistemler & Teknolojiler</h2>
+          </div>
+          <p class="section-sub">Avenir güvenlik sistemleri, modern anahtar-priz serileri, aydınlatma ve bina otomasyon çözümleri ile teknolojiyi mekanınıza taşıyoruz.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">🛡️</div>
+            <h3>Avenir Güvenlik Kameraları</h3>
+            <p>Yüksek çözünürlüklü ve kesintisiz kayıt yapan profesyonel Avenir güvenlik çözümleri.</p>
+            <ul><li>Avenir IP ve AHD yüksek çözünürlüklü kameralar</li><li>Gece görüşlü ve hareket sensörlü kayıt</li><li>DVR/NVR kayıt cihazları ve mobil uzak izleme</li><li>7/24 kesintisiz güvenlik ve alarm sistemleri</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">🔘</div>
+            <h3>Modern Anahtar ve Priz Serileri</h3>
+            <p>Mekanınızın dekorasyonuna uyum sağlayan, estetik ve güvenli anahtar priz çözümleri.</p>
+            <ul><li>Minimalist ve şık tasarımlı seriler</li><li>Geniş renk ve çerçeve seçenekleri</li><li>Güvenli iç mekanizma ve çocuk koruması</li><li>Akıllı ev uyumlu komütatör ve prizler</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">🏢</div>
+            <h3>Bina Otomatiği & Haberleşme</h3>
+            <p>Apartman, site ve iş yerleri için modern haberleşme ve merkezi kontrol sistemleri.</p>
+            <ul><li>Görüntülü konuşma sistemleri (Diafon)</li><li>Bina otomatiği ve akıllı ev entegrasyonu</li><li>Merkezi bina uydu sistemi kurulumu</li><li>Geçiş kontrol ve şifreli kapı sistemleri</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">🔌</div>
+            <h3>Elektrik & Aydınlatma Malzemeleri</h3>
+            <p>Yüksek kalite standartlarında, uzun ömürlü ve güvenilir elektrik altyapı donanımları.</p>
+            <ul><li>LED şerit, trafo ve aydınlatma profilleri</li><li>Dekoratif ray spot ve aydınlatma armatürleri</li><li>Şalt malzemeleri ve sigorta sistemleri</li><li>Bina içi hareket sensörlü aydınlatma otomasyonu</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
     <section class="projects" id="projelerimiz">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="section-label">Projelerimiz</div>
-            <h2 class="section-title">Tamamlanan projeler</h2>
+            <div class="section-label">Referanslarımız</div>
+            <h2 class="section-title">Projelerimiz</h2>
           </div>
-          <p class="section-sub">Elektrik tesisatı, aydınlatma ve güvenlik sistemleri uygulamalarından seçilmiş projeler.</p>
         </div>
-
-        <div class="projects-grid">
-          <figure class="photo-item reveal">
-            <img src="resim1.jpeg" alt="Tamamlanan proje görseli 1" loading="lazy" />
-            <figcaption class="photo-caption">
-              <strong>Proje 1</strong>
-              <span>Elektrik ve aydınlatma uygulaması</span>
-            </figcaption>
-          </figure>
-          <figure class="photo-item reveal">
-            <img src="resim2.jpeg" alt="Tamamlanan proje görseli 2" loading="lazy" />
-            <figcaption class="photo-caption">
-              <strong>Proje 2</strong>
-              <span>Modern aydınlatma çözümü</span>
-            </figcaption>
-          </figure>
-          <figure class="photo-item reveal">
-            <img src="resim3.jpeg" alt="Tamamlanan proje görseli 3" loading="lazy" />
-            <figcaption class="photo-caption">
-              <strong>Proje 3</strong>
-              <span>Güvenlik sistemi montajı</span>
-            </figcaption>
-          </figure>
-          <figure class="photo-item reveal">
-            <img src="resim4.jpeg" alt="Tamamlanan proje görseli 4" loading="lazy" />
-            <figcaption class="photo-caption">
-              <strong>Proje 4</strong>
-              <span>Temiz tesisat uygulaması</span>
-            </figcaption>
-          </figure>
-          <figure class="photo-item reveal">
-            <img src="resim5.jpeg" alt="Tamamlanan proje görseli 5" loading="lazy" />
-            <figcaption class="photo-caption">
-              <strong>Proje 5</strong>
-              <span>Kapsamlı sistem kurulumu</span>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects" id="projeler">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-label">Gerçek Projeler</div>
-            <h2 class="section-title">Tamamlanan işlerimiz</h2>
-          </div>
-          <p class="section-sub">Uygulama kalitesini, detay işçiliğini ve teslim edilen projeleri görsel olarak inceleyebilirsiniz.</p>
-        </div>
-
         <div class="photos-grid">
-          <figure class="photo-item reveal">
-            <img src="proje-1.jpg" alt="Tamamlanan proje görseli 1" />
-            <figcaption class="photo-caption"><strong>Tamamlanan Proje</strong><span>Elektrik ve aydınlatma uygulaması</span></figcaption>
-          </figure>
-          <figure class="photo-item reveal">
-            <img src="proje-2.jpg" alt="Tamamlanan proje görseli 2" />
-            <figcaption class="photo-caption"><strong>Tamamlanan Proje</strong><span>Modern ve temiz uygulama</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="videolar">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-label">Canlı Kayıtlar</div>
-            <h2 class="section-title">Proje videoları</h2>
-          </div>
-          <p class="section-sub">İşçilik sürecini ve uygulama detaylarını gösteren kısa proje kayıtları.</p>
-        </div>
-
-        <div class="videos-grid">
-          <article class="video-card reveal"><video controls muted playsinline preload="metadata"><source src="proje-video-3.mov" type="video/mp4" /></video><div class="video-card-label">Proje Video 3</div></article>
-          <article class="video-card reveal"><video controls muted playsinline preload="metadata"><source src="proje-video-4.mov" type="video/mp4" /></video><div class="video-card-label">Proje Video 4</div></article>
-          <article class="video-card reveal"><video controls muted playsinline preload="metadata"><source src="proje-video-5.mov" type="video/mp4" /></video><div class="video-card-label">Proje Video 5</div></article>
-          <article class="video-card reveal"><video controls muted playsinline preload="metadata"><source src="proje-video-6.mov" type="video/mp4" /></video><div class="video-card-label">Proje Video 6</div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects" id="solar">
-      <div class="container solar-grid">
-        <div class="solar-media reveal">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="videos/proje-video-4.mov" type="video/mp4" />
-            <source src="proje-video-4.mov" type="video/mp4" />
-          </video>
-          <div class="solar-badge">⚡ TommaTech & Lexron iş birliği</div>
-        </div>
-
-        <div>
-          <div class="section-label">Güneş Enerjisi</div>
-          <h2 class="section-title">6.2 kW lityum bataryalı sistem</h2>
-          <p class="section-sub" style="margin-top:14px">Elektriğinizi kendiniz üretin. Hibrit invertör, lityum batarya ve yüksek verimli panellerle daha sürdürülebilir enerji kullanımı hedefleyin.</p>
-          <div class="feature-list">
-            <div class="feature reveal"><div class="feature-icon">🔋</div><div><h4>Lityum Batarya</h4><p>Uzun ömürlü ve yüksek kapasiteli enerji depolama.</p></div></div>
-            <div class="feature reveal"><div class="feature-icon">🔄</div><div><h4>Hibrit İnvertör</h4><p>Şebeke ve solar enerjiyi birlikte kullanabilen sistem yapısı.</p></div></div>
-            <div class="feature reveal"><div class="feature-icon">🌞</div><div><h4>600 W Monokristal Panel</h4><p>Yüksek verimli panel teknolojisi ve uzun vadeli güç garantisi.</p></div></div>
-          </div>
-          <a href="https://wa.me/905456074507?text=Merhaba, solar sistem hakkında bilgi almak istiyorum." class="btn btn-gold" style="margin-top:26px">Solar Bilgi Al</a>
+          <article class="photo-item reveal">
+            <img width="25" height="25" src="images/resim1.png" alt="Proje 1">
+            <div class="photo-caption">
+              <strong>AV-S333 9MP</strong>
+              <span>Wifi Bağlantısı - Gece Görüşlü - Çift Yönlü - 3 Kameralı</span>
+            </div>
+          </article>
+          <article class="photo-item reveal">
+            <img width="25" height="25" src="images/resim2.png" alt="Proje 2">
+            <div class="photo-caption">
+              <strong>AV-S446</strong>
+              <span>Telefondan Uzaktan Kontrol - 4 Kameralı - 3 Dönebilir</span>
+            </div>
+          </article>
+          <article class="photo-item reveal">
+            <img width="25" height="25" src="images/resim3.png" alt="Proje 3">
+            <div class="photo-caption">
+              <strong>AW-S463</strong>
+              <span>3 Kamera - 6MP Ultra Net Görüntü - Gece Görüşlü - 12000mAh batarya - Güçlü Şifre</span>
+            </div> 
+          </article>
+          <article class="photo-item reveal">
+            <img width="25" height="25" src="images/resim4.png" alt="Proje 4">
+            <div class="photo-caption">
+              <strong>AV-S446</strong>
+              <span>4 Kameralı - 3 PTZ'li</span>
+            </div>
+          </article>
+          <article class="photo-item reveal">
+            <img width="25" height="25" src="images/resim5.png" alt="Proje 5">
+            <div class="photo-caption">
+              <strong>AV-SL400W</strong>
+              <span>Hem Sokak Lambası Hem Aydınlatma</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -742,14 +706,22 @@
           </div>
           <p class="section-sub">Teknik bilgi, temiz işçilik ve hızlı iletişimle proje sürecini baştan sona yönetiyoruz.</p>
         </div>
-
         <div class="why-grid">
-          <article class="why-card reveal"><div class="why-icon">🏅</div><h4>Deneyim ve Güven</h4><p>10+ yıllık tecrübe ve 500+ tamamlanan proje.</p></article>
-          <article class="why-card reveal"><div class="why-icon">🔑</div><h4>Anahtar Teslim</h4><p>Keşif, planlama, montaj ve teknik destek tek elden.</p></article>
-          <article class="why-card reveal"><div class="why-icon">📐</div><h4>Özel Planlama</h4><p>Mekanınıza ve ihtiyacınıza göre uygun çözüm.</p></article>
-          <article class="why-card reveal"><div class="why-icon">⚡</div><h4>Hızlı Servis</h4><p>Acil müdahale ve randevulu çalışma düzeni.</p></article>
-          <article class="why-card reveal"><div class="why-icon">💰</div><h4>Uygun Fiyat</h4><p>Kaliteli malzeme ve rekabetçi fiyat dengesi.</p></article>
-          <article class="why-card reveal"><div class="why-icon">🌿</div><h4>Yeşil Enerji</h4><p>Solar çözümlerle bütçeye ve doğaya katkı.</p></article>
+          <article class="why-card reveal">
+            <div class="why-icon">🤝</div>
+            <h4>Güvenilirlik</h4>
+            <p>Söz verdiğimiz zamanda, eksiksiz ve güvenli teslimat yapıyoruz.</p>
+          </article>
+          <article class="why-card reveal">
+            <div class="why-icon">⚡</div>
+            <h4>Uzman Kadro</h4>
+            <p>Yılların deneyimiyle elektrik, aydınlatma ve güvenlik altyapınızı profesyonelce kuruyoruz.</p>
+          </article>
+          <article class="why-card reveal">
+            <div class="why-icon">🛡️</div>
+            <h4>Garantili İşçilik</h4>
+            <p>Kullandığımız tüm malzemeler ve işçiliğimiz tam kalite standartlarına uygundur.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -783,6 +755,7 @@
       <div>© 2026 Tüm hakları saklıdır.</div>
       <div class="footer-links">
         <a href="#hizmetler">Hizmetler</a>
+        <a href="#urunler">Ürünler</a>
         <a href="#projelerimiz">Projelerimiz</a>
         <a href="#videolar">Videolar</a>
         <a href="https://www.instagram.com/harunelektrikaydinlatma00/" target="_blank" rel="noopener">Instagram</a>
