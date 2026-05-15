@@ -537,6 +537,68 @@
   
 .product-img-wrap{background:#fff;}
 .product-img-wrap img{border-radius:14px;}
+
+
+    /* Görsellerin ürünle karışmaması için tam ürün fotoğrafını göster */
+    .product-img-wrap img, .product-card img {
+      object-fit: contain !important;
+      background: #fff !important;
+    }
+    .product-img-wrap {
+      background: #fff !important;
+    }
+
+
+    /* Logo */
+    .brand-mark { background: #fff !important; border: 1px solid var(--line); }
+    .brand-mark img { object-fit: contain !important; padding: 4px; }
+
+    /* Katalog kaydırma butonları */
+    .scroll-buttons { display: flex; gap: 10px; align-items: center; }
+    .scroll-btn, .slide-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid #d0d5dd;
+      background: #fff;
+      color: var(--navy);
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: 900;
+      box-shadow: var(--shadow-sm);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .scroll-btn:hover, .slide-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+    /* Konum haritası */
+    .location-box {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-height: 100%;
+    }
+    .location-head { padding: 8px 8px 0; }
+    .location-head h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 1.85rem;
+      line-height: 1.05;
+      margin-bottom: 8px;
+    }
+    .location-head p { color: var(--muted); font-weight: 700; line-height: 1.45; }
+    .map-frame {
+      width: 100%;
+      min-height: 310px;
+      border: 0;
+      border-radius: 22px;
+      background: var(--surface-2);
+    }
+    .location-actions { display: flex; gap: 10px; flex-wrap: wrap; padding: 0 4px 4px; }
 </style>
 </head>
 <body>
@@ -548,7 +610,7 @@
 </div>
 <nav id="navbar">
 <div class="nav-inner">
-<a aria-label="Ana sayfa" class="brand" href="#hero">
+<a aria-label="Ana sayfa" class="brand" href="#hero"><div class="brand-mark"><img alt="Harun Elektrik Logo" src="logo.png"/></div>
 <div class="brand-title">Harun Elektrik <span>Profesyonel Çözümler</span></div>
 </a>
 <div class="nav-actions">
@@ -589,93 +651,93 @@
 </div>
 <div class="product-row" id="avenir-row">
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Avenir AV-S304 Wi‑Fi Çift Lens Kamera" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2024/10/2-5-300x300.jpg"/></div>
+<div class="product-img-wrap"><img alt="Avenir AV-S304 Çift Lens Wi‑Fi Kamera" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2024/10/2-5-300x300.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Wi‑Fi Kamera</span>
-<h3>Avenir AV-S304 Wi‑Fi Çift Lens Kamera</h3>
-<p>Ev ve iş yeri için çift lensli Wi‑Fi kamera modeli.</p>
-<div class="product-meta"><span>Kamera</span><span>Wi‑Fi</span></div>
+<h3>Avenir AV-S304 Çift Lens Wi‑Fi Kamera</h3>
+<p>Çift lensli güvenlik kamerası; ev, dükkan ve bina çevresi izleme için kullanılır.</p>
+<div class="product-meta"><span>Çift Lens</span><span>Wi‑Fi</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Avenir AV-S333 Üç Kameralı PTZ" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2024/10/AV-S304-1-Kopya-300x300.jpg"/></div>
+<div class="product-img-wrap"><img alt="Avenir AV-S304 Hareketli Wi‑Fi Kamera" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2024/10/AV-S304-1-Kopya-300x300.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">PTZ Kamera</span>
-<h3>Avenir AV-S333 Üç Kameralı PTZ</h3>
-<p>Geniş alan izleme için çok açılı PTZ güvenlik kamerası.</p>
-<div class="product-meta"><span>3 Lens</span><span>Dış Mekan</span></div>
+<span class="product-tag">Wi‑Fi Kamera</span>
+<h3>Avenir AV-S304 Hareketli Wi‑Fi Kamera</h3>
+<p>Hareketli yapıya sahip Wi‑Fi güvenlik kamerası; ev ve iş yeri izleme için kullanılır.</p>
+<div class="product-meta"><span>Hareketli</span><span>Wi‑Fi</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Avenir AV-S414 Solar Kamera" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2026/02/AV-S3082-300x300.jpg"/></div>
+<div class="product-img-wrap"><img alt="Avenir AV-S308 Solar Güvenlik Kamerası" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2026/02/AV-S3082-300x300.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Solar Kamera</span>
-<h3>Avenir AV-S414 Solar Kamera</h3>
-<p>Elektrik hattı zor yerler için güneş panelli kamera çözümü.</p>
+<h3>Avenir AV-S308 Solar Güvenlik Kamerası</h3>
+<p>Güneş paneli destekli kamera; kablo çekmenin zor olduğu dış alanlar için tercih edilir.</p>
 <div class="product-meta"><span>Solar</span><span>Kablosuz</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Avenir AV-S430X Zoom Solar Kamera" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2026/02/AV-S3133-300x300.jpeg"/></div>
+<div class="product-img-wrap"><img alt="Avenir AV-S313 Solar Güvenlik Kamerası" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2026/02/AV-S3133-300x300.jpeg"/></div>
 <div class="product-content">
-<span class="product-tag">Zoom Kamera</span>
-<h3>Avenir AV-S430X Zoom Solar Kamera</h3>
-<p>Uzak mesafe izleme için zoom özellikli solar kamera.</p>
-<div class="product-meta"><span>30X</span><span>Solar</span></div>
+<span class="product-tag">Solar Kamera</span>
+<h3>Avenir AV-S313 Solar Güvenlik Kamerası</h3>
+<p>Dış mekanda uzaktan takip için kullanılan solar destekli güvenlik kamerası.</p>
+<div class="product-meta"><span>Solar</span><span>Dış Mekan</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Avenir DVR Kayıt Cihazı" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2025/08/AV-S316-300x300.png"/></div>
+<div class="product-img-wrap"><img alt="Avenir AV-S316 Güvenlik Kamerası" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2025/08/AV-S316-300x300.png"/></div>
 <div class="product-content">
-<span class="product-tag">Kayıt Cihazı</span>
-<h3>Avenir DVR Kayıt Cihazı</h3>
-<p>Analog kamera sistemleri için kayıt ve izleme cihazı.</p>
-<div class="product-meta"><span>DVR</span><span>Kamera Sistemi</span></div>
+<span class="product-tag">Kamera</span>
+<h3>Avenir AV-S316 Güvenlik Kamerası</h3>
+<p>Bina önü, bahçe, depo ve iş yeri çevresi için kamera çözümü.</p>
+<div class="product-meta"><span>Kamera</span><span>Gece Görüş</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Avenir NVR IP Kayıt Cihazı" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2025/08/AV-S316X-300x300.png"/></div>
+<div class="product-img-wrap"><img alt="Avenir AV-S316X Güvenlik Kamerası" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2025/08/AV-S316X-300x300.png"/></div>
 <div class="product-content">
-<span class="product-tag">NVR Cihazı</span>
-<h3>Avenir NVR IP Kayıt Cihazı</h3>
-<p>IP kameralar için ağ üzerinden kayıt çözümü.</p>
-<div class="product-meta"><span>IP Kamera</span><span>Network</span></div>
+<span class="product-tag">Kamera</span>
+<h3>Avenir AV-S316X Güvenlik Kamerası</h3>
+<p>Dış mekan kurulumlarında kullanılabilen güvenlik kamerası modeli.</p>
+<div class="product-meta"><span>Kamera</span><span>Dış Mekan</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Avenir PoE Switch Kamera Besleme" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2025/07/AV-S333-300x300.png"/></div>
+<div class="product-img-wrap"><img alt="Avenir AV-S333 Güvenlik Kamerası" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2025/07/AV-S333-300x300.png"/></div>
 <div class="product-content">
-<span class="product-tag">PoE Switch</span>
-<h3>Avenir PoE Switch Kamera Besleme</h3>
-<p>IP kameraları tek kabloyla beslemek için PoE switch.</p>
-<div class="product-meta"><span>Network</span><span>Kamera</span></div>
+<span class="product-tag">Kamera</span>
+<h3>Avenir AV-S333 Güvenlik Kamerası</h3>
+<p>Çok açılı izleme gereken alanlarda kullanılan güvenlik kamerası.</p>
+<div class="product-meta"><span>Kamera</span><span>Geniş Açı</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Avenir İç Mekan Wi‑Fi Kamera" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2026/02/S414-300x300.jpg"/></div>
+<div class="product-img-wrap"><img alt="Avenir AV-S414 Solar Kamera" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2026/02/S414-300x300.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">İç Mekan</span>
-<h3>Avenir İç Mekan Wi‑Fi Kamera</h3>
-<p>Ev içi takip ve uzaktan izleme için kompakt kamera.</p>
-<div class="product-meta"><span>Wi‑Fi</span><span>Mobil İzleme</span></div>
+<span class="product-tag">Solar Kamera</span>
+<h3>Avenir AV-S414 Solar Kamera</h3>
+<p>Güneş paneli destekli kamera; elektrik hattı olmayan noktalar için uygundur.</p>
+<div class="product-meta"><span>Solar</span><span>Bataryalı</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Avenir Alarm Sirenli Kamera" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2025/07/AV-S427H-300x300.jpg"/></div>
+<div class="product-img-wrap"><img alt="Avenir AV-S427H Güvenlik Kamerası" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2025/07/AV-S427H-300x300.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Alarm Kamera</span>
-<h3>Avenir Alarm Sirenli Kamera</h3>
-<p>Hareket algılamada uyarı verebilen sirenli kamera.</p>
-<div class="product-meta"><span>Siren</span><span>Hareket</span></div>
+<span class="product-tag">Kamera</span>
+<h3>Avenir AV-S427H Güvenlik Kamerası</h3>
+<p>Apartman, mağaza ve çevre güvenliği için kullanılabilecek kamera modeli.</p>
+<div class="product-meta"><span>Kamera</span><span>Güvenlik</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Avenir Kapı Önü Güvenlik Kamerası" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2026/02/AV-S430X-kopyasi-300x300.jpg"/></div>
+<div class="product-img-wrap"><img alt="Avenir AV-S430X Solar Güvenlik Kamerası" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.avenir.com.tr/wp-content/uploads/2026/02/AV-S430X-kopyasi-300x300.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Kapı Kamera</span>
-<h3>Avenir Kapı Önü Güvenlik Kamerası</h3>
-<p>Giriş kapısı ve bina önü için pratik izleme ürünü.</p>
-<div class="product-meta"><span>Giriş</span><span>Gece Görüş</span></div>
+<span class="product-tag">Solar Kamera</span>
+<h3>Avenir AV-S430X Solar Güvenlik Kamerası</h3>
+<p>Dış alanlarda kablosuz izleme için kullanılan solar destekli kamera.</p>
+<div class="product-meta"><span>Solar</span><span>Dış Alan</span></div>
 </div>
 </article>
 </div>
@@ -686,8 +748,8 @@
 <div class="catalog-head reveal">
 <div>
 <div class="section-label">Cata Kataloğu</div>
-<h2 class="section-title">Cata LED, akıllı kontrol ve aydınlatma ürünleri</h2>
-<p class="section-sub" style="margin-top:12px">Cata bölümünde ray spot dışında akıllı anahtar, akıllı priz, sensör, projektör ve dekoratif aydınlatma çeşitleri de var.</p>
+<h2 class="section-title">Cata ray spot, panel LED ve aydınlatma ürünleri</h2>
+<p class="section-sub" style="margin-top:12px">Cata bölümünde ray spot, lineer spot, slim panel, LED armatür ve projektör gibi aydınlatma ürünleri yer alıyor.</p>
 </div>
 <div class="scroll-buttons">
 <button aria-label="Sola kaydır" class="scroll-btn" onclick="scrollProducts('cata-row', -1)" type="button">‹</button>
@@ -696,48 +758,48 @@
 </div>
 <div class="product-row" id="cata-row">
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Cata CT-4015 Wi‑Fi Akıllı Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-18524-12-K.jpg"/></div>
-<div class="product-content">
-<span class="product-tag">Akıllı Anahtar</span>
-<h3>Cata CT-4015 Wi‑Fi Akıllı Anahtar</h3>
-<p>Telefonla kontrol edilebilen internetli anahtar çözümü.</p>
-<div class="product-meta"><span>Wi‑Fi</span><span>Mobil Kontrol</span></div>
-</div>
-</article>
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Cata CT-4010 Akıllı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-21406-12-K.webp"/></div>
-<div class="product-content">
-<span class="product-tag">Akıllı Priz</span>
-<h3>Cata CT-4010 Akıllı Priz</h3>
-<p>Elektrikli cihazları telefondan açıp kapatmaya uygun akıllı priz.</p>
-<div class="product-meta"><span>Wi‑Fi</span><span>Zamanlama</span></div>
-</div>
-</article>
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Cata Ray Spot LED Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-19220-12-K.jpg"/></div>
+<div class="product-img-wrap"><img alt="Cata Siyah Ray Spot LED Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-18524-12-K.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Ray Spot</span>
-<h3>Cata Ray Spot LED Armatür</h3>
-<p>Mağaza ve salonlarda kullanılan modern ray spot aydınlatma.</p>
-<div class="product-meta"><span>LED</span><span>Ray Sistem</span></div>
+<h3>Cata Siyah Ray Spot LED Armatür</h3>
+<p>Ray sistemine takılan siyah gövdeli, yönlendirilebilir spot aydınlatma.</p>
+<div class="product-meta"><span>Ray Spot</span><span>LED</span></div>
+</div>
+</article>
+<article class="product-card reveal">
+<div class="product-img-wrap"><img alt="Cata Siyah Lineer Ray Spot Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-21406-12-K.webp"/></div>
+<div class="product-content">
+<span class="product-tag">Lineer Spot</span>
+<h3>Cata Siyah Lineer Ray Spot Armatür</h3>
+<p>Birden fazla LED gözü bulunan, mağaza ve salonlarda kullanılan lineer ray spot.</p>
+<div class="product-meta"><span>Lineer</span><span>Ray Spot</span></div>
+</div>
+</article>
+<article class="product-card reveal">
+<div class="product-img-wrap"><img alt="Cata Beyaz Lineer Ray Spot LED" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-19220-12-K.jpg"/></div>
+<div class="product-content">
+<span class="product-tag">Lineer Spot</span>
+<h3>Cata Beyaz Lineer Ray Spot LED</h3>
+<p>Beyaz gövdeli lineer spot; vitrin, mağaza ve modern iç mekan aydınlatmaları için uygundur.</p>
+<div class="product-meta"><span>Beyaz</span><span>LED</span></div>
 </div>
 </article>
 <article class="product-card reveal">
 <div class="product-img-wrap"><img alt="Cata Slim LED Panel" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-19217-12-K.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Panel LED</span>
+<span class="product-tag">Slim Panel</span>
 <h3>Cata Slim LED Panel</h3>
-<p>Tavanlarda sade ve güçlü ışık için ince panel led.</p>
-<div class="product-meta"><span>Tavan</span><span>LED</span></div>
+<p>Tavanda düz ve modern görüntü veren ince gövdeli LED panel aydınlatma.</p>
+<div class="product-meta"><span>Panel</span><span>LED</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Cata Hareket Sensörlü Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-19218-12-K.jpg"/></div>
+<div class="product-img-wrap"><img alt="Cata İnce Lineer LED Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-19218-12-K.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Sensörlü</span>
-<h3>Cata Hareket Sensörlü Armatür</h3>
-<p>Koridor ve girişlerde otomatik yanan sensörlü ürün.</p>
-<div class="product-meta"><span>Hareket</span><span>Otomatik</span></div>
+<span class="product-tag">Lineer LED</span>
+<h3>Cata İnce Lineer LED Armatür</h3>
+<p>Koridor, mutfak ve tezgah üstü gibi alanlarda kullanılan ince lineer LED armatür.</p>
+<div class="product-meta"><span>Lineer</span><span>LED</span></div>
 </div>
 </article>
 <article class="product-card reveal">
@@ -745,44 +807,44 @@
 <div class="product-content">
 <span class="product-tag">Projektör</span>
 <h3>Cata LED Projektör</h3>
-<p>Dış mekan ve bahçe alanları için güçlü projektör aydınlatma.</p>
+<p>Bahçe, bina önü ve dış mekanlarda güçlü ışık için kullanılan LED projektör.</p>
 <div class="product-meta"><span>Dış Mekan</span><span>LED</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Cata Dekoratif Sarkıt Avize" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-18524-12-K.jpg"/></div>
+<div class="product-img-wrap"><img alt="Cata Siyah Ray Spot Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-18524-12-K.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Avize</span>
-<h3>Cata Dekoratif Sarkıt Avize</h3>
-<p>Masa üstü ve salon kullanımı için sarkıt aydınlatma.</p>
-<div class="product-meta"><span>Dekoratif</span><span>Sarkıt</span></div>
+<span class="product-tag">Ray Spot</span>
+<h3>Cata Siyah Ray Spot Armatür</h3>
+<p>Ray hattına monte edilen, yönü ayarlanabilir siyah spot armatür.</p>
+<div class="product-meta"><span>Ray Spot</span><span>Siyah</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Cata Şerit LED Adaptörlü Set" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-21406-12-K.webp"/></div>
+<div class="product-img-wrap"><img alt="Cata Çoklu Lineer Ray Spot" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-21406-12-K.webp"/></div>
 <div class="product-content">
-<span class="product-tag">Şerit LED</span>
-<h3>Cata Şerit LED Adaptörlü Set</h3>
-<p>Dolap, raf ve dekor alanları için şerit led çözümü.</p>
-<div class="product-meta"><span>Dekor</span><span>Adaptör</span></div>
+<span class="product-tag">Lineer Spot</span>
+<h3>Cata Çoklu Lineer Ray Spot</h3>
+<p>Yan yana LED gözleriyle geniş alanı aydınlatan modern lineer spot.</p>
+<div class="product-meta"><span>Çoklu</span><span>Spot</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Cata Bahçe Duvar Apliği" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-19220-12-K.jpg"/></div>
+<div class="product-img-wrap"><img alt="Cata Beyaz Ray Tipi LED Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-19220-12-K.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Aplik</span>
-<h3>Cata Bahçe Duvar Apliği</h3>
-<p>Dış cephe ve bahçe duvarları için aplik armatür.</p>
-<div class="product-meta"><span>Dış Mekan</span><span>Duvar</span></div>
+<span class="product-tag">Ray Armatür</span>
+<h3>Cata Beyaz Ray Tipi LED Armatür</h3>
+<p>Ray sistemli aydınlatmalarda kullanılan beyaz gövdeli LED armatür.</p>
+<div class="product-meta"><span>Ray Tipi</span><span>LED</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Cata LED Ampul Yüksek Lümen" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-19217-12-K.jpg"/></div>
+<div class="product-img-wrap"><img alt="Cata Slim Panel LED Aydınlatma" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.starakim.com/-19217-12-K.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Ampul</span>
-<h3>Cata LED Ampul Yüksek Lümen</h3>
-<p>Ev ve iş yerleri için tasarruflu LED ampul.</p>
-<div class="product-meta"><span>Tasarruf</span><span>LED</span></div>
+<span class="product-tag">Panel LED</span>
+<h3>Cata Slim Panel LED Aydınlatma</h3>
+<p>Ofis, mutfak ve oda tavanlarında sade görünüm sağlayan panel LED.</p>
+<div class="product-meta"><span>Panel</span><span>Tavan</span></div>
 </div>
 </article>
 </div>
@@ -807,8 +869,8 @@
 <div class="product-content">
 <span class="product-tag">Panel LED</span>
 <h3>Noas Slim Panel LED</h3>
-<p>Ofis ve ev tavanları için ince gövdeli panel aydınlatma.</p>
-<div class="product-meta"><span>Slim</span><span>Tavan</span></div>
+<p>Asma tavan ve düz tavan uygulamaları için ince gövdeli panel LED.</p>
+<div class="product-meta"><span>Panel</span><span>LED</span></div>
 </div>
 </article>
 <article class="product-card reveal">
@@ -816,17 +878,17 @@
 <div class="product-content">
 <span class="product-tag">Ray Spot</span>
 <h3>Noas Ray Spot LED</h3>
-<p>Vitrin ve salonlarda yönlendirilebilir spot aydınlatma.</p>
-<div class="product-meta"><span>Ray</span><span>LED</span></div>
+<p>Işığın yönlendirilmesi gereken vitrin, mağaza ve salon alanları için ray spot.</p>
+<div class="product-meta"><span>Ray Spot</span><span>LED</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Noas Hareket Sensörlü LED" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.noas.com.tr/uploads/image/8c2f5a1c87d63db715dddd9b1a520d65-1664581400550.jpg"/></div>
+<div class="product-img-wrap"><img alt="Noas Hareket Sensörlü LED Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.noas.com.tr/uploads/image/8c2f5a1c87d63db715dddd9b1a520d65-1664581400550.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Sensörlü LED</span>
-<h3>Noas Hareket Sensörlü LED</h3>
-<p>Ortak alanlarda otomatik yanan sensörlü aydınlatma.</p>
-<div class="product-meta"><span>Sensör</span><span>Otomatik</span></div>
+<h3>Noas Hareket Sensörlü LED Armatür</h3>
+<p>Hareket algıladığında otomatik yanan sensörlü LED aydınlatma.</p>
+<div class="product-meta"><span>Sensör</span><span>LED</span></div>
 </div>
 </article>
 <article class="product-card reveal">
@@ -834,34 +896,34 @@
 <div class="product-content">
 <span class="product-tag">Projektör</span>
 <h3>Noas LED Projektör</h3>
-<p>Dış alanlar için yüksek ışık veren projektör.</p>
-<div class="product-meta"><span>Dış Mekan</span><span>Güçlü Işık</span></div>
+<p>Dış mekan, bahçe ve bina çevresi için yüksek ışık veren projektör.</p>
+<div class="product-meta"><span>Dış Mekan</span><span>Projektör</span></div>
 </div>
 </article>
 <article class="product-card reveal">
 <div class="product-img-wrap"><img alt="Noas LED Ampul" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.noas.com.tr/uploads/image/dffaf07b3a766b6ee29257a7d9999991-1676672116958.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Ampul</span>
+<span class="product-tag">LED Ampul</span>
 <h3>Noas LED Ampul</h3>
-<p>Günlük kullanım için ekonomik LED ampul.</p>
-<div class="product-meta"><span>E27</span><span>Tasarruf</span></div>
+<p>Ev ve iş yerlerinde günlük kullanım için tasarruflu LED ampul.</p>
+<div class="product-meta"><span>Ampul</span><span>LED</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Noas LED Şerit Işık" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.noas.com.tr/uploads/image/5d3948362e10baa0dfa9fe3dd117b974-1670222412131.jpg"/></div>
+<div class="product-img-wrap"><img alt="Noas Şerit LED Aydınlatma" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.noas.com.tr/uploads/image/5d3948362e10baa0dfa9fe3dd117b974-1670222412131.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Şerit LED</span>
-<h3>Noas LED Şerit Işık</h3>
-<p>Dekoratif ışıklandırma ve dolap altı uygulamalar için.</p>
-<div class="product-meta"><span>Dekor</span><span>Esnek</span></div>
+<h3>Noas Şerit LED Aydınlatma</h3>
+<p>Dolap altı, raf, tavan gizli ışık ve dekoratif uygulamalar için şerit LED.</p>
+<div class="product-meta"><span>Şerit</span><span>Dekoratif</span></div>
 </div>
 </article>
 <article class="product-card reveal">
 <div class="product-img-wrap"><img alt="Noas Sıva Üstü LED Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.noas.com.tr/uploads/image/efbf2564bc4e9efaf9ab94f4b73cb998-1670222389239.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Armatür</span>
+<span class="product-tag">Sıva Üstü LED</span>
 <h3>Noas Sıva Üstü LED Armatür</h3>
-<p>Tavan ve duvar yüzeylerine pratik montajlı armatür.</p>
+<p>Tavan veya duvara gömmeden monte edilen pratik LED armatür.</p>
 <div class="product-meta"><span>Sıva Üstü</span><span>LED</span></div>
 </div>
 </article>
@@ -870,26 +932,26 @@
 <div class="product-content">
 <span class="product-tag">Bahçe LED</span>
 <h3>Noas Bahçe Aydınlatma Armatürü</h3>
-<p>Bina dışı ve bahçe alanları için dekoratif çözüm.</p>
-<div class="product-meta"><span>Dış Mekan</span><span>IP Koruma</span></div>
+<p>Bahçe, teras ve bina dışı alanlarda kullanılan dış mekan aydınlatması.</p>
+<div class="product-meta"><span>Bahçe</span><span>Dış Mekan</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Noas Akıllı Zaman Ayarlı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.noas.com.tr/uploads/image/ef662d58c2c51f41ad4ff0d7e2d958f2-1670222331632.jpg"/></div>
+<div class="product-img-wrap"><img alt="Noas Zaman Ayarlı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.noas.com.tr/uploads/image/ef662d58c2c51f41ad4ff0d7e2d958f2-1670222331632.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Zamanlı Priz</span>
-<h3>Noas Akıllı Zaman Ayarlı Priz</h3>
-<p>Belirli saatlerde çalışan cihazlar için zaman kontrollü priz.</p>
-<div class="product-meta"><span>Timer</span><span>Kontrol</span></div>
+<h3>Noas Zaman Ayarlı Priz</h3>
+<p>Cihazları belirlenen saatlerde çalıştırmak için kullanılan zaman ayarlı priz.</p>
+<div class="product-meta"><span>Timer</span><span>Priz</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Noas Dekoratif Sarkıt LED" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.noas.com.tr/uploads/image/7d2a0d962cf037ee32e8d0f535e25606-1676672213596.jpg"/></div>
+<div class="product-img-wrap"><img alt="Noas Dekoratif Sarkıt Aydınlatma" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.noas.com.tr/uploads/image/7d2a0d962cf037ee32e8d0f535e25606-1676672213596.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Sarkıt LED</span>
-<h3>Noas Dekoratif Sarkıt LED</h3>
-<p>Mutfak, salon ve kafe alanları için dekoratif sarkıt.</p>
-<div class="product-meta"><span>Dekoratif</span><span>Modern</span></div>
+<h3>Noas Dekoratif Sarkıt Aydınlatma</h3>
+<p>Mutfak, salon, masa üstü ve kafe alanları için dekoratif sarkıt ışık.</p>
+<div class="product-meta"><span>Sarkıt</span><span>Dekoratif</span></div>
 </div>
 </article>
 </div>
@@ -901,7 +963,7 @@
 <div>
 <div class="section-label">Viko Kataloğu</div>
 <h2 class="section-title">Viko anahtar, akıllı kontrol ve priz çeşitleri</h2>
-<p class="section-sub" style="margin-top:12px">Viko kısmında denge değiştirildi: anahtar, komütatör, vavien, dimmer, sensör, internetli kontrol, USB, data ve TV ürünleri birlikte gösteriliyor.</p>
+<p class="section-sub" style="margin-top:12px">Bu bölümde sadece priz değil; anahtar, komütatör, vavien, dimmer, sensörlü anahtar, Wi‑Fi röle, USB, data ve TV bağlantı ürünleri birlikte gösteriliyor.</p>
 </div>
 <div class="scroll-buttons">
 <button aria-label="Sola kaydır" class="scroll-btn" onclick="scrollProducts('viko-row', -1)" type="button">‹</button>
@@ -914,8 +976,8 @@
 <div class="product-content">
 <span class="product-tag">Anahtar</span>
 <h3>Viko Karre Tekli Anahtar</h3>
-<p>Standart aydınlatma aç-kapa işlemleri için tekli anahtar.</p>
-<div class="product-meta"><span>Tekli</span><span>Duvar Tipi</span></div>
+<p>Tek bir aydınlatma hattını açıp kapatmak için kullanılan duvar anahtarı.</p>
+<div class="product-meta"><span>Tekli</span><span>Anahtar</span></div>
 </div>
 </article>
 <article class="product-card reveal">
@@ -923,8 +985,8 @@
 <div class="product-content">
 <span class="product-tag">Komütatör</span>
 <h3>Viko Karre Komütatör Anahtar</h3>
-<p>İki ayrı ışık hattını kontrol etmeye uygun komütatör anahtar.</p>
-<div class="product-meta"><span>2 Hat</span><span>Aydınlatma</span></div>
+<p>İki ayrı lamba grubunu tek noktadan kontrol eden komütatör anahtar.</p>
+<div class="product-meta"><span>Komütatör</span><span>Anahtar</span></div>
 </div>
 </article>
 <article class="product-card reveal">
@@ -932,43 +994,43 @@
 <div class="product-content">
 <span class="product-tag">Vavien</span>
 <h3>Viko Karre Vavien Anahtar</h3>
-<p>Koridor ve merdivende iki noktadan kontrol için vavien anahtar.</p>
-<div class="product-meta"><span>Çift Nokta</span><span>Koridor</span></div>
+<p>Merdiven ve koridorlarda ışığı iki farklı noktadan kontrol etmek için kullanılan vavien anahtar.</p>
+<div class="product-meta"><span>Vavien</span><span>Anahtar</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Viko Dimmer Işık Ayar Anahtarı" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110001117609001.jpg"/></div>
+<div class="product-img-wrap"><img alt="Viko Işık Ayarlı Dimmer" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110001117609001.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Dimmer</span>
-<h3>Viko Dimmer Işık Ayar Anahtarı</h3>
-<p>Işık seviyesini kısma ve artırma için dimmer kontrol.</p>
-<div class="product-meta"><span>Işık Ayarı</span><span>Konfor</span></div>
+<h3>Viko Işık Ayarlı Dimmer</h3>
+<p>Uyumlu aydınlatmalarda ışık seviyesini azaltıp artırmak için kullanılan dimmer.</p>
+<div class="product-meta"><span>Dimmer</span><span>Kontrol</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Viko Hareket Sensörlü Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/12/222-222/9093678432306.jpg"/></div>
+<div class="product-img-wrap"><img alt="Viko Hareket Sensörü" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/12/222-222/9093678432306.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Sensörlü</span>
-<h3>Viko Hareket Sensörlü Anahtar</h3>
-<p>Hareket algılayınca ışığı otomatik açan sensörlü anahtar.</p>
-<div class="product-meta"><span>Hareket</span><span>Otomatik</span></div>
+<span class="product-tag">Sensör</span>
+<h3>Viko Hareket Sensörü</h3>
+<p>Koridor, giriş ve ortak alanlarda hareket algılamaya yarayan sensör ürünü.</p>
+<div class="product-meta"><span>Sensör</span><span>Otomatik</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Viko Touchless Temassız Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110001117626299.jpg"/></div>
+<div class="product-img-wrap"><img alt="Viko Temassız Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110001117626299.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Temassız</span>
-<h3>Viko Touchless Temassız Anahtar</h3>
-<p>El değmeden kontrol için temassız anahtar ürünü.</p>
-<div class="product-meta"><span>Hijyen</span><span>Sensör</span></div>
+<h3>Viko Temassız Anahtar</h3>
+<p>El değmeden kontrol sağlamak için kullanılan temassız anahtar/kontrol ürünü.</p>
+<div class="product-meta"><span>Temassız</span><span>Kontrol</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Viko Wi‑Fi Akıllı Röle Kontrol" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110001738946270.jpg"/></div>
+<div class="product-img-wrap"><img alt="Viko Wi‑Fi Akıllı Röle" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110001738946270.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Akıllı Kontrol</span>
-<h3>Viko Wi‑Fi Akıllı Röle Kontrol</h3>
-<p>Mevcut anahtar hattını internetli kontrole çevirmek için akıllı röle.</p>
+<span class="product-tag">Akıllı Röle</span>
+<h3>Viko Wi‑Fi Akıllı Röle</h3>
+<p>Mevcut aydınlatma hattını telefondan kontrol edilebilir hale getiren Wi‑Fi röle.</p>
 <div class="product-meta"><span>Wi‑Fi</span><span>Röle</span></div>
 </div>
 </article>
@@ -977,8 +1039,8 @@
 <div class="product-content">
 <span class="product-tag">USB Priz</span>
 <h3>Viko USB Çıkışlı Priz</h3>
-<p>Telefon ve cihaz şarjı için USB çıkışlı priz.</p>
-<div class="product-meta"><span>USB</span><span>Şarj</span></div>
+<p>Telefon ve küçük cihazları adaptörsüz şarj etmek için USB çıkışlı priz.</p>
+<div class="product-meta"><span>USB</span><span>Priz</span></div>
 </div>
 </article>
 <article class="product-card reveal">
@@ -986,16 +1048,16 @@
 <div class="product-content">
 <span class="product-tag">Data Prizi</span>
 <h3>Viko RJ45 Data Prizi</h3>
-<p>İnternet ve ağ kablosu bağlantısı için data prizi.</p>
-<div class="product-meta"><span>RJ45</span><span>Network</span></div>
+<p>Modem, bilgisayar ve ağ kablosu bağlantısı için kullanılan RJ45 data prizi.</p>
+<div class="product-meta"><span>RJ45</span><span>Data</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Viko TV Uydu Prizi" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/51/222-222/11071622512690.jpg"/></div>
+<div class="product-img-wrap"><img alt="Viko TV / Uydu Prizi" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/51/222-222/11071622512690.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">TV Prizi</span>
-<h3>Viko TV Uydu Prizi</h3>
-<p>TV ve uydu hattı için duvar tipi bağlantı prizi.</p>
+<h3>Viko TV / Uydu Prizi</h3>
+<p>Televizyon veya uydu kablosunu duvara düzgün şekilde bağlamak için kullanılan TV prizi.</p>
 <div class="product-meta"><span>TV</span><span>Uydu</span></div>
 </div>
 </article>
@@ -1008,7 +1070,7 @@
 <div>
 <div class="section-label">Ovivo Kataloğu</div>
 <h2 class="section-title">Ovivo anahtar, modern kontrol ve bağlantı ürünleri</h2>
-<p class="section-sub" style="margin-top:12px">Ovivo kısmı da sadece priz değil: anahtar, vavien, komütatör, dimmer, USB, data, TV, zil butonu ve dekoratif çerçeve çeşitleri var.</p>
+<p class="section-sub" style="margin-top:12px">Ovivo bölümünde anahtar, komütatör, vavien, dimmer, zil butonu, USB priz, data prizi, TV prizi, akıllı anahtar ve çerçeve çeşitleri yer alıyor.</p>
 </div>
 <div class="scroll-buttons">
 <button aria-label="Sola kaydır" class="scroll-btn" onclick="scrollProducts('ovivo-row', -1)" type="button">‹</button>
@@ -1021,35 +1083,35 @@
 <div class="product-content">
 <span class="product-tag">Anahtar</span>
 <h3>Ovivo Grano Tekli Anahtar</h3>
-<p>Modern görünümlü standart tekli anahtar.</p>
-<div class="product-meta"><span>Tekli</span><span>Grano</span></div>
+<p>Tek bir ışık hattını açıp kapatmak için kullanılan modern duvar anahtarı.</p>
+<div class="product-meta"><span>Tekli</span><span>Anahtar</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo Grano Komütatör" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110001602810374.jpg"/></div>
+<div class="product-img-wrap"><img alt="Ovivo Grano Komütatör Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110001602810374.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Komütatör</span>
-<h3>Ovivo Grano Komütatör</h3>
-<p>İki farklı ışık grubunu kontrol eden komütatör anahtar.</p>
-<div class="product-meta"><span>2 Hat</span><span>Işık</span></div>
+<h3>Ovivo Grano Komütatör Anahtar</h3>
+<p>İki ayrı aydınlatma hattını kontrol etmek için kullanılan komütatör anahtar.</p>
+<div class="product-meta"><span>Komütatör</span><span>Anahtar</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo Grano Vavien" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/59/222-222/110000000942984.jpg"/></div>
+<div class="product-img-wrap"><img alt="Ovivo Grano Vavien Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/59/222-222/110000000942984.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Vavien</span>
-<h3>Ovivo Grano Vavien</h3>
-<p>Merdiven ve koridorlarda iki noktadan kontrol için vavien.</p>
-<div class="product-meta"><span>Koridor</span><span>Çift Nokta</span></div>
+<h3>Ovivo Grano Vavien Anahtar</h3>
+<p>Işığı iki farklı noktadan kontrol etmek için kullanılan vavien anahtar.</p>
+<div class="product-meta"><span>Vavien</span><span>Anahtar</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo Grano Dimmer Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/259/222-222/110000242368818.jpg"/></div>
+<div class="product-img-wrap"><img alt="Ovivo Grano Dimmer" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/259/222-222/110000242368818.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Dimmer</span>
-<h3>Ovivo Grano Dimmer Anahtar</h3>
-<p>Salon ve oda ışığını ayarlamak için dimmer anahtar.</p>
-<div class="product-meta"><span>Işık Ayarı</span><span>Dekor</span></div>
+<h3>Ovivo Grano Dimmer</h3>
+<p>Işık parlaklığını ayarlamak için kullanılan dimmer kontrol ürünü.</p>
+<div class="product-meta"><span>Dimmer</span><span>Kontrol</span></div>
 </div>
 </article>
 <article class="product-card reveal">
@@ -1057,8 +1119,8 @@
 <div class="product-content">
 <span class="product-tag">Zil Butonu</span>
 <h3>Ovivo Zil Butonu</h3>
-<p>Kapı zili ve giriş sistemleri için buton ürünü.</p>
-<div class="product-meta"><span>Kapı</span><span>Buton</span></div>
+<p>Kapı zili ve giriş sistemlerinde kullanılan basmalı zil butonu.</p>
+<div class="product-meta"><span>Zil</span><span>Buton</span></div>
 </div>
 </article>
 <article class="product-card reveal">
@@ -1066,8 +1128,8 @@
 <div class="product-content">
 <span class="product-tag">USB Priz</span>
 <h3>Ovivo USB Şarjlı Priz</h3>
-<p>Adaptörsüz şarj için USB çıkışlı priz modeli.</p>
-<div class="product-meta"><span>USB</span><span>Şarj</span></div>
+<p>Telefon ve tablet şarjı için USB çıkışı bulunan duvar prizi.</p>
+<div class="product-meta"><span>USB</span><span>Priz</span></div>
 </div>
 </article>
 <article class="product-card reveal">
@@ -1075,35 +1137,35 @@
 <div class="product-content">
 <span class="product-tag">Data Prizi</span>
 <h3>Ovivo RJ45 Data Prizi</h3>
-<p>Modem ve internet hattı bağlantısı için data prizi.</p>
-<div class="product-meta"><span>RJ45</span><span>Network</span></div>
+<p>Modem, bilgisayar ve ağ bağlantısı için kullanılan RJ45 data prizi.</p>
+<div class="product-meta"><span>RJ45</span><span>Data</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo TV Prizi" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110001554413918.jpg"/></div>
+<div class="product-img-wrap"><img alt="Ovivo TV / Uydu Prizi" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110001554413918.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">TV Prizi</span>
-<h3>Ovivo TV Prizi</h3>
-<p>TV veya uydu kablosu bağlantısı için duvar prizi.</p>
+<h3>Ovivo TV / Uydu Prizi</h3>
+<p>TV veya uydu hattını duvara düzgün şekilde bağlamak için kullanılan TV prizi.</p>
 <div class="product-meta"><span>TV</span><span>Uydu</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo Akıllı Anahtar Kontrol" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110000815798486.jpg"/></div>
+<div class="product-img-wrap"><img alt="Ovivo Akıllı Kontrol Modülü" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110000815798486.jpg"/></div>
 <div class="product-content">
-<span class="product-tag">Akıllı Anahtar</span>
-<h3>Ovivo Akıllı Anahtar Kontrol</h3>
-<p>Akıllı ev sistemlerine uygun internetli anahtar kontrolü.</p>
-<div class="product-meta"><span>Wi‑Fi</span><span>Smart</span></div>
+<span class="product-tag">Akıllı Kontrol</span>
+<h3>Ovivo Akıllı Kontrol Modülü</h3>
+<p>Aydınlatma veya elektrik hattını akıllı sistemle kontrol etmeye yönelik kontrol ürünü.</p>
+<div class="product-meta"><span>Akıllı</span><span>Kontrol</span></div>
 </div>
 </article>
 <article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo Dekoratif Çerçeve Seti" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/67/222-222/110000009220481.jpg"/></div>
+<div class="product-img-wrap"><img alt="Ovivo Dekoratif Çerçeve" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/67/222-222/110000009220481.jpg"/></div>
 <div class="product-content">
 <span class="product-tag">Çerçeve</span>
-<h3>Ovivo Dekoratif Çerçeve Seti</h3>
-<p>Anahtar ve prizleri tamamlayan modern çerçeve seti.</p>
-<div class="product-meta"><span>Dekor</span><span>Set</span></div>
+<h3>Ovivo Dekoratif Çerçeve</h3>
+<p>Anahtar ve priz mekanizmalarını tamamlayan dekoratif çerçeve.</p>
+<div class="product-meta"><span>Çerçeve</span><span>Aksesuar</span></div>
 </div>
 </article>
 </div>
@@ -1114,18 +1176,23 @@
 <div>
 <div class="section-label">Bize Ulaşın</div>
 <h2 class="section-title">Projenizi birlikte planlayalım.</h2>
-<p class="section-sub" style="margin-top:14px">Elektrik, aydınlatma, solar enerji veya güvenlik sistemi ihtiyaçlarınız için iletişime geçin. Ücretsiz keşif ve fiyat teklifi için hızlı dönüş sağlanır.</p>
+<p class="section-sub" style="margin-top:14px">Elektrik, aydınlatma, solar enerji, güvenlik sistemi, anahtar-priz ve kamera ihtiyaçlarınız için iletişime geçin. Ücretsiz keşif ve fiyat teklifi için hızlı dönüş sağlanır.</p>
 <div class="contact-info">
 <div class="contact-item"><div class="contact-icon">📞</div><div><h4>Telefon</h4><a href="tel:05456074507">0545 607 4507</a></div></div>
 <div class="contact-item"><div class="contact-icon">📸</div><div><h4>Instagram</h4><a href="https://www.instagram.com/harunelektrikaydinlatma00/" rel="noopener" target="_blank">@harunelektrikaydinlatma00</a></div></div>
-<div class="contact-item"><div class="contact-icon">📍</div><div><h4>Hizmet Bölgesi</h4><p>Ereğli ve çevresi</p></div></div>
+<div class="contact-item"><div class="contact-icon">📍</div><div><h4>Adres</h4><p>Kavaklık, Halkapınar Sk No:168, 67300 Ereğli/Zonguldak</p></div></div>
 </div>
 </div>
-<aside class="quote-box">
-<h3>Hızlı teklif alın</h3>
-<p>WhatsApp üzerinden projenizi kısaca anlatın, uygun çözüm ve fiyatlandırma için iletişime geçelim.</p>
-<a class="btn btn-whatsapp" href="https://wa.me/905456074507?text=Merhaba, bilgi almak istiyorum.">WhatsApp'tan Yaz</a>
-<a class="btn btn-outline" href="tel:05456074507" style="margin-top:12px;background:transparent;color:#fff;border-color:rgba(255,255,255,.28)">📞 Hemen Ara</a>
+<aside class="location-box">
+<div class="location-head">
+<h3>Konumumuz</h3>
+<p>No:168<br/>Kavaklık, Halkapınar Sk No:168, 67300 Ereğli/Zonguldak</p>
+</div>
+<iframe allowfullscreen="" class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Kavakl%C4%B1k%2C%20Halkap%C4%B1nar%20Sk%20No%3A168%2C%2067300%20Ere%C4%9Fli/Zonguldak&amp;output=embed" title="Harun Elektrik Konum Haritası"></iframe>
+<div class="location-actions">
+<a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kavakl%C4%B1k%2C%20Halkap%C4%B1nar%20Sk%20No%3A168%2C%2067300%20Ere%C4%9Fli/Zonguldak" rel="noopener" target="_blank">Yol Tarifi Al</a>
+<a class="btn btn-outline" href="tel:05456074507">📞 Hemen Ara</a>
+</div>
 </aside>
 </div>
 </section>
@@ -1140,13 +1207,15 @@
 <svg aria-hidden="true" fill="white" height="29" viewbox="0 0 24 24" width="29"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
 </a>
 <script>
-    
-    document.querySelectorAll('.slide-btn').forEach(button => {
+    function scrollProducts(rowId, direction) {
+      const row = document.getElementById(rowId);
+      if (!row) return;
+      row.scrollBy({ left: direction * Math.min(900, row.clientWidth * 0.9), behavior: 'smooth' });
+    }
+
+    document.querySelectorAll('.scroll-btn[data-target], .slide-btn[data-target]').forEach(button => {
       button.addEventListener('click', () => {
-        const row = document.getElementById(button.dataset.target);
-        if (!row) return;
-        const dir = Number(button.dataset.dir || 1);
-        row.scrollBy({ left: dir * Math.min(900, row.clientWidth * 0.9), behavior: 'smooth' });
+        scrollProducts(button.dataset.target, Number(button.dataset.dir || 1));
       });
     });
 
