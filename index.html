@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harun Elektrik</title>
-  <meta name="description" content="Ereğli ve çevresinde elektrik tesisatı, aydınlatma, solar enerji, kamera ve güvenlik sistemleri için profesyonel çözümler. 0545 607 4507" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Harun Elektrik</title>
+<meta content="Ereğli ve çevresinde elektrik tesisatı, aydınlatma, solar enerji, kamera ve güvenlik sistemleri için profesyonel çözümler. 0545 607 4507" name="description"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --bg: #ffffff;
       --surface: #f7f8fb;
@@ -437,639 +438,675 @@
       .quote-box { border-radius: 22px; }
       .wa-float { right: 16px; bottom: 16px; width: 56px; height: 56px; }
     }
+
+    .catalog { background: #f7f8fb; padding: 84px 0; }
+    .catalog + .catalog { padding-top: 18px; }
+    .catalog-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+    .catalog-copy { max-width: 710px; }
+    .catalog-actions { display: flex; gap: 10px; align-items: center; }
+    .slide-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid #d0d5dd;
+      background: #fff;
+      color: var(--navy);
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: 900;
+      box-shadow: var(--shadow-sm);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .slide-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .product-row {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(250px, 270px);
+      gap: 18px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 4px 4px 18px;
+      scrollbar-width: thin;
+    }
+    .product-row::-webkit-scrollbar { height: 10px; }
+    .product-row::-webkit-scrollbar-track { background: #eef2f7; border-radius: 999px; }
+    .product-row::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+    .product-card {
+      scroll-snap-align: start;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      min-height: 392px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .product-img-wrap {
+      height: 188px;
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+      display: grid;
+      place-items: center;
+      border-bottom: 1px solid var(--line);
+      padding: 14px;
+    }
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+    .product-content { padding: 18px; display: flex; flex-direction: column; flex: 1; }
+    .product-tag {
+      align-self: flex-start;
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 5px 9px;
+      background: #fef7e6;
+      color: var(--gold-dark);
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+    .product-card h3 { color: var(--navy); font-size: .98rem; line-height: 1.25; margin-bottom: 7px; }
+    .product-card p { color: var(--muted); font-size: .82rem; line-height: 1.45; margin-bottom: 14px; }
+    .product-meta { margin-top: auto; display: flex; gap: 7px; flex-wrap: wrap; }
+    .product-meta span { background: #f8fafc; border: 1px solid var(--line); color: #475467; border-radius: 999px; padding: 6px 9px; font-size: .72rem; font-weight: 800; }
+    .catalog-note { color: var(--muted); font-size: .86rem; margin-top: 10px; }
+    @media (max-width: 700px) {
+      .catalog { padding: 58px 0; }
+      .catalog-head { align-items: flex-start; flex-direction: column; }
+      .catalog-actions { width: 100%; justify-content: flex-end; }
+      .product-row { grid-auto-columns: minmax(235px, 78vw); }
+      .product-img-wrap { height: 175px; }
+    }
+
   </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="container">
-      <span>Elektrik • Aydınlatma • Solar Enerji • Güvenlik Sistemleri</span>
-      <span>Hızlı iletişim: <a href="tel:05456074507">0545 607 4507</a></span>
+<div class="topbar">
+<div class="container">
+<span>Elektrik • Aydınlatma • Solar Enerji • Güvenlik Sistemleri</span>
+<span>Hızlı iletişim: <a href="tel:05456074507">0545 607 4507</a></span>
+</div>
+</div>
+<nav id="navbar">
+<div class="nav-inner">
+<a aria-label="Ana sayfa" class="brand" href="#hero">
+<div class="brand-title">Harun Elektrik <span>Profesyonel Çözümler</span></div>
+</a>
+<div class="nav-actions">
+<a class="btn btn-primary" href="tel:05456074507">📞 Hızlı Teklif Al</a>
+</div>
+</div>
+</nav>
+<main>
+<header class="hero" id="hero">
+<div class="container hero-grid">
+<div class="hero-copy">
+<div class="eyebrow">Ereğli ve çevresinde profesyonel hizmet</div>
+<h1>Güvenli altyapı, estetik aydınlatma ve <span>akıllı enerji</span> çözümleri.</h1>
+<p class="hero-lead">Elektrik tesisatı, modern aydınlatma, kamera sistemleri ve solar enerji projelerinde anahtar teslim, temiz ve güvenilir işçilik.</p>
+<div class="hero-actions">
+<a class="btn btn-gold" href="#iletisim">Ücretsiz Teklif Al</a>
+</div>
+<div class="trust-row">
+<div class="trust-card"><strong>Ereğli</strong><span>Hizmet Bölgesi</span></div>
+<div class="trust-card"><strong>100%</strong><span>Müşteri Memnuniyeti</span></div>
+<div class="trust-card"><strong>7/24</strong><span>Hızlı Destek</span></div>
+</div>
+</div>
+</div>
+</header>
+<section class="catalog" id="avenir">
+  <div class="container">
+    <div class="catalog-head reveal">
+      <div class="catalog-copy">
+        <div class="section-label">En çok tercih edilen kamera modelleri</div>
+        <h2 class="section-title">Avenir güvenlik kameraları</h2>
+        <p class="section-sub" style="margin-top:12px">Wi‑Fi, solar ve çok lensli güvenlik kamera çeşitleri.</p>
+        <p class="catalog-note">Sağa sola kaydırarak ürünleri inceleyebilirsiniz. Her bölümde 10 ürün vardır.</p>
+      </div>
+      <div class="catalog-actions">
+        <button class="slide-btn" type="button" aria-label="Sola kaydır" data-target="avenir-row" data-dir="-1">‹</button>
+        <button class="slide-btn" type="button" aria-label="Sağa kaydır" data-target="avenir-row" data-dir="1">›</button>
+      </div>
+    </div>
+    <div class="product-row" id="avenir-row">
+      <article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.avenir.com.tr/wp-content/uploads/2024/10/AV-S304-1-Kopya-300x300.jpg" alt="AV-S304 4MP Wi‑Fi PTZ Çift Lens" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Wi‑Fi Kamera</span>
+    <h3>AV-S304 4MP Wi‑Fi PTZ Çift Lens</h3>
+    <p>4MP çift kamera, PTZ hareket, çift yönlü ses ve IP66 gövde.</p>
+    <div class="product-meta"><span>4MP</span><span>PTZ</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.avenir.com.tr/wp-content/uploads/2026/02/AV-S3082-300x300.jpg" alt="AV-S308 6MP PTZ Kamera" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">PTZ Kamera</span>
+    <h3>AV-S308 6MP PTZ Kamera</h3>
+    <p>Dış mekan kullanımına uygun hareketli güvenlik kamerası.</p>
+    <div class="product-meta"><span>6MP</span><span>Gece Görüş</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.avenir.com.tr/wp-content/uploads/2026/02/AV-S3133-300x300.jpeg" alt="AV-S313 4MP Sirenli Kamera" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Alarm</span>
+    <h3>AV-S313 4MP Sirenli Kamera</h3>
+    <p>Alarm, gece görüşü ve uzaktan izleme desteği.</p>
+    <div class="product-meta"><span>4MP</span><span>Siren</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.avenir.com.tr/wp-content/uploads/2025/08/AV-S316-300x300.png" alt="AV-S316 Çok Lensli Kamera" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Çok Kameralı</span>
+    <h3>AV-S316 Çok Lensli Kamera</h3>
+    <p>Geniş alan güvenliği için çok kameralı yapı.</p>
+    <div class="product-meta"><span>16MP</span><span>4 Lens</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.avenir.com.tr/wp-content/uploads/2025/07/AV-S333-300x300.png" alt="AV-S333 Wi‑Fi 3 Kameralı PTZ" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">3 Kameralı</span>
+    <h3>AV-S333 Wi‑Fi 3 Kameralı PTZ</h3>
+    <p>Üç kameralı PTZ yapı, hareket takibi ve gece görüş.</p>
+    <div class="product-meta"><span>Wi‑Fi</span><span>PTZ</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.avenir.com.tr/wp-content/uploads/2026/02/S414-300x300.jpg" alt="AV-S414 5MP E-SIM Solar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Solar</span>
+    <h3>AV-S414 5MP E-SIM Solar</h3>
+    <p>Solar panelli, bataryalı ve AOV sürekli kayıt destekli kamera.</p>
+    <div class="product-meta"><span>5MP</span><span>Solar</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.avenir.com.tr/wp-content/uploads/2025/07/AV-S427H-300x300.jpg" alt="AV-S427H 6MP 4G Solar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">4G Solar</span>
+    <h3>AV-S427H 6MP 4G Solar</h3>
+    <p>4G SIM destekli, güneş enerjili çift kameralı PTZ model.</p>
+    <div class="product-meta"><span>6MP</span><span>4G</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.avenir.com.tr/wp-content/uploads/2026/02/AV-S430X-kopyasi-300x300.jpg" alt="AV-S430X 30X Zoom Solar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Zoom</span>
+    <h3>AV-S430X 30X Zoom Solar</h3>
+    <p>30X zoom, çift kamera ve solar panel ile dış mekan çözümü.</p>
+    <div class="product-meta"><span>30X</span><span>Solar</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.avenir.com.tr/wp-content/uploads/2025/08/AV-S463-S.png" alt="AV-S463 3 Kameralı Solar PTZ" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Solar PTZ</span>
+    <h3>AV-S463 3 Kameralı Solar PTZ</h3>
+    <p>SIM kartlı, solar panelli ve 3 kameralı PTZ güvenlik çözümü.</p>
+    <div class="product-meta"><span>6MP</span><span>SIM</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.avenir.com.tr/wp-content/uploads/2026/04/AV-S439-5-300x300.jpg" alt="AV-S439 4G 3PTZ Solar eSIM" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">eSIM</span>
+    <h3>AV-S439 4G 3PTZ Solar eSIM</h3>
+    <p>3 kameralı 3PTZ yapı, 4G/eSIM ve solar panel desteği.</p>
+    <div class="product-meta"><span>4G/eSIM</span><span>Solar</span></div>
+  </div>
+</article>
     </div>
   </div>
-
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a class="brand" href="#hero" aria-label="Ana sayfa">
-        <div class="brand-title">Harun Elektrik <span>Profesyonel Çözümler</span></div>
-      </a>
-
-      <div class="nav-actions">
-        <a class="btn btn-primary" href="tel:05456074507">📞 Hızlı Teklif Al</a>
+</section>
+<section class="catalog" id="cata">
+  <div class="container">
+    <div class="catalog-head reveal">
+      <div class="catalog-copy">
+        <div class="section-label">Ray spot, panel LED ve armatürler</div>
+        <h2 class="section-title">Cata popüler aydınlatmalar</h2>
+        <p class="section-sub" style="margin-top:12px">Mağaza, ev ve ofis projelerinde sık kullanılan Cata aydınlatma ürünleri.</p>
+        <p class="catalog-note">Sağa sola kaydırarak ürünleri inceleyebilirsiniz. Her bölümde 10 ürün vardır.</p>
+      </div>
+      <div class="catalog-actions">
+        <button class="slide-btn" type="button" aria-label="Sola kaydır" data-target="cata-row" data-dir="-1">‹</button>
+        <button class="slide-btn" type="button" aria-label="Sağa kaydır" data-target="cata-row" data-dir="1">›</button>
       </div>
     </div>
-  </nav>
-
-  <main>
-    <header class="hero" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow">Ereğli ve çevresinde profesyonel hizmet</div>
-          <h1>Güvenli altyapı, estetik aydınlatma ve <span>akıllı enerji</span> çözümleri.</h1>
-          <p class="hero-lead">Elektrik tesisatı, modern aydınlatma, kamera sistemleri ve solar enerji projelerinde anahtar teslim, temiz ve güvenilir işçilik.</p>
-          <div class="hero-actions">
-            <a href="#iletisim" class="btn btn-gold">Ücretsiz Teklif Al</a>
-          </div>
-          <div class="trust-row">
-            <div class="trust-card"><strong>Ereğli</strong><span>Hizmet Bölgesi</span></div>
-            <div class="trust-card"><strong>100%</strong><span>Müşteri Memnuniyeti</span></div>
-            <div class="trust-card"><strong>7/24</strong><span>Hızlı Destek</span></div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-
-    <section class="catalog" id="avenir-guvenlik-kameralari">
-      <div class="container reveal">
-        <div class="catalog-head">
-          <div>
-            <div class="section-label">Avenir Güvenlik Kameraları</div>
-            <h2 class="section-title">Çok tercih edilen Avenir kamera çözümleri.</h2>
-          </div>
-          <p class="section-sub">Dış mekan, solar, Wi-Fi, 4G/eSIM ve PTZ kamera ihtiyaçları için 6 farklı Avenir güvenlik kamerası. Görseller resmi Avenir ürün sayfalarından internet üzerinden yüklenir.</p>
-        </div>
-
-        <div class="catalog-grid">
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.avenir.com.tr/wp-content/uploads/2024/10/AV-S304-1-Kopya-300x300.jpg" alt="Avenir AV-S304 4MP WiFi çift lensli kamera" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Wi-Fi Kamera</span>
-              <h3>Avenir AV-S304 4MP WiFi Çift Lensli Kamera</h3>
-              <p>Çift yönlü ses, insan algılama, Onvif desteği ve renkli gece görüşüyle ev ve iş yeri güvenliği için uygun.</p>
-              <div class="product-meta"><span>4MP</span><span>Wi-Fi</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.avenir.com.tr/wp-content/uploads/2026/02/AV-S3082-300x300.jpg" alt="Avenir AV-S308 6MP üç kameralı PTZ WiFi kamera" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">PTZ Kamera</span>
-              <h3>Avenir AV-S308 6MP 3 Kameralı PTZ WiFi Kamera</h3>
-              <p>3 kameralı yapı, hareket takibi, çift yönlü ses ve SD kart desteğiyle geniş alan izleme için tercih edilir.</p>
-              <div class="product-meta"><span>6MP</span><span>PTZ</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.avenir.com.tr/wp-content/uploads/2026/02/AV-S3133-300x300.jpeg" alt="Avenir AV-S313 4MP iki kameralı PTZ WiFi sirenli kamera" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Sirenli Kamera</span>
-              <h3>Avenir AV-S313 4MP 2 Kameralı PTZ WiFi Kamera</h3>
-              <p>Sesli alarm, hareket algılama, insan takibi ve gece görüş desteğiyle caydırıcı dış mekan çözümü.</p>
-              <div class="product-meta"><span>4MP</span><span>Alarm</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.avenir.com.tr/wp-content/uploads/2025/08/AV-S316-300x300.png" alt="Avenir AV-S316 16MP dört kameralı WiFi kamera" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Çok Kameralı</span>
-              <h3>Avenir AV-S316 16MP 4 Kameralı WiFi Kamera</h3>
-              <p>4 kameralı tasarım, insan algılama, gece görüşü ve geniş hareket açısıyla büyük alanlar için güçlü seçenek.</p>
-              <div class="product-meta"><span>16MP</span><span>4 Kamera</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.avenir.com.tr/wp-content/uploads/2025/07/AV-S333-300x300.png" alt="Avenir AV-S333 9MP üç kameralı PTZ full HD kamera" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Full HD</span>
-              <h3>Avenir AV-S333 9MP 3 Kameralı PTZ Kamera</h3>
-              <p>Onvif, bulut kayıt, çift yönlü ses, IP66 koruma ve renkli gece görüşüyle dış mekan kurulumlarına uygun.</p>
-              <div class="product-meta"><span>9MP</span><span>IP66</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.avenir.com.tr/wp-content/uploads/2026/04/AV-S439-5-300x300.jpg" alt="Avenir AV-S439 4G solar eSIM güvenlik kamerası" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">4G Solar</span>
-              <h3>Avenir AV-S439 4G 3 Kameralı Solar eSIM Kamera</h3>
-              <p>4G SIM/eSIM, solar panel, 16000mAh batarya, insan takibi ve gece görüşüyle elektriğin sınırlı olduğu alanlara uygun.</p>
-              <div class="product-meta"><span>4G/eSIM</span><span>Solar</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="catalog" id="priz-katalogu">
-      <div class="container reveal">
-        <div class="catalog-head">
-          <div>
-            <div class="section-label">Priz Kataloğu</div>
-            <h2 class="section-title">Modern ve güvenli priz çözümleri.</h2>
-          </div>
-          <p class="section-sub">Ev, ofis ve ticari alanlar için tekli, ikili, kapaklı ve gömme tip priz seçenekleri. Görseller internet üzerinden çekilir ve sayfa açıldığında otomatik yüklenir.</p>
-        </div>
-
-        <div class="catalog-grid">
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://image.schrackcdn.com/foto/f_ev101303--.jpg" alt="Beyaz gömme Schuko priz" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Tekli Priz</span>
-              <h3>Beyaz Gömme Schuko Priz</h3>
-              <p>Sade tasarımlı, standart iç mekan kullanımı için uygun gömme priz modeli.</p>
-              <div class="product-meta"><span>16A</span><span>230V</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://image.schrackcdn.com/foto/f_ev101313--.jpg" alt="Beyaz ikili Schuko priz" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">İkili Priz</span>
-              <h3>Beyaz İkili Schuko Priz</h3>
-              <p>Birden fazla cihaz için düzenli ve kompakt kullanım sağlayan ikili priz.</p>
-              <div class="product-meta"><span>16A</span><span>230V</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://image.schrackcdn.com/foto/f_ev106152a-.jpg" alt="Çocuk korumalı beyaz priz" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Korumalı</span>
-              <h3>Çocuk Korumalı Priz</h3>
-              <p>Güvenlik kapağı ve korumalı yapısıyla ev kullanımı için güvenli çözüm.</p>
-              <div class="product-meta"><span>16A</span><span>250V</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://image.schrackcdn.com/foto/f_ev101303--_v10.jpg" alt="10'lu paket beyaz gömme priz" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Toplu İş</span>
-              <h3>Toplu Proje Prizi</h3>
-              <p>Daire, ofis ve tadilat projelerinde seri montaj için tercih edilebilir.</p>
-              <div class="product-meta"><span>10x</span><span>Schuko</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://image.schrackcdn.com/foto/f_ev101313--_v01.jpg" alt="Priz arka bağlantı görünümü" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Montaj</span>
-              <h3>Bağlantı ve Montaj Yapısı</h3>
-              <p>Priz bağlantı detaylarını gösteren arka yüzey görünümüyle teknik sunum için uygun.</p>
-              <div class="product-meta"><span>Gömme</span><span>Bağlantı</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://image.schrackcdn.com/foto/f_ev101313--_v04.jpg" alt="İkili priz detay görseli" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Detay</span>
-              <h3>İkili Priz Detay Görseli</h3>
-              <p>Katalog görünümünü zenginleştirmek için yüksek çözünürlüklü ürün detayı.</p>
-              <div class="product-meta"><span>Beyaz</span><span>Modern</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="catalog" id="audio-diafon-katalogu">
-      <div class="container reveal">
-        <div class="catalog-head">
-          <div>
-            <div class="section-label">Audio Görüntülü Diafonlar</div>
-            <h2 class="section-title">Güvenli girişler için görüntülü diafon çözümleri.</h2>
-          </div>
-          <p class="section-sub">Apartman, site, villa ve iş yerleri için Audio marka görüntülü diafon modelleri. Görseller internet üzerinden çekilir ve sayfa açıldığında otomatik yüklenir.</p>
-        </div>
-
-        <div class="catalog-grid">
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://b3239352.smushcdn.com/3239352/wp-content/uploads/2019/02/001194-001194a-001862-600x600.png?lossy=1&strip=1&webp=1" alt="Audio 7 inç beyaz görüntülü diafon" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Bus Plus</span>
-              <h3>7″ Görüntülü Diafon Bus Plus</h3>
-              <p>Dokunmatik ekranlı, handsfree kullanımlı ve daireler arası görüşme destekli modern diafon modeli.</p>
-              <div class="product-meta"><span>7″ TFT</span><span>1024x600</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://b3239352.smushcdn.com/3239352/wp-content/uploads/2019/02/001194-001194A-001862-3-600x600.jpg?lossy=1&strip=1&webp=1" alt="Audio 7 inç IP Android görüntülü diafon" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">IP Android</span>
-              <h3>7″ Görüntülü Diafon IP Android</h3>
-              <p>Wi‑Fi bağlantısı, görüntülü görüşme ve IP kamera görüntüleme desteğiyle akıllı bina çözümleri için uygundur.</p>
-              <div class="product-meta"><span>7″ TFT</span><span>Wi‑Fi</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://b3239352.smushcdn.com/3239352/wp-content/uploads/2019/02/001196-001864-600x600.jpg?lossy=1&strip=1&webp=1" alt="Audio 10.1 inç IP Android görüntülü diafon" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">10.1 İnç</span>
-              <h3>10.1″ Görüntülü Diafon IP Android</h3>
-              <p>Geniş ekranlı, dokunmatik ve yüksek görüntü kalitesi isteyen projeler için profesyonel çözüm.</p>
-              <div class="product-meta"><span>10.1″ TFT</span><span>Android</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://b3239352.smushcdn.com/3239352/wp-content/uploads/2019/01/001120d-600x600.jpg?lossy=1&strip=1&webp=1" alt="Audio siyah dik görüntülü diafon" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Siyah Dik</span>
-              <h3>4.3″ Dokunmatik Butonlu Diafon</h3>
-              <p>Siyah dik tasarımı, dokunmatik butonlu kullanımı ve handsfree konuşma özelliğiyle şık bir seçenektir.</p>
-              <div class="product-meta"><span>4.3″ TFT</span><span>480x272</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://b3239352.smushcdn.com/3239352/wp-content/uploads/2019/02/001197-001865-600x600.jpg?lossy=1&strip=1&webp=1" alt="Audio siyah yatay görüntülü diafon" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Siyah Yatay</span>
-              <h3>7″ Siyah Görüntülü Diafon</h3>
-              <p>Siyah yatay tasarımlı ekran yapısıyla modern daire ve ofis projelerinde dekoratif görünüm sağlar.</p>
-              <div class="product-meta"><span>7″</span><span>Siyah</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.audio.com.tr/wp-content/uploads/2019/01/BusPlus-1.png" alt="Audio Bus Plus sistem tanıtımı" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Sistem</span>
-              <h3>Audio Bus Plus Altyapısı</h3>
-              <p>Merkezi ve düzenli diafon kurulumu için Bus Plus sistem altyapısını tanıtan teknik görsel.</p>
-              <div class="product-meta"><span>Bus Plus</span><span>Dijital</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="catalog" id="ray-spot-katalogu">
-      <div class="container reveal">
-        <div class="catalog-head">
-          <div>
-            <div class="section-label">Ray Spot LED Işıkları</div>
-            <h2 class="section-title">Mağaza, vitrin ve evler için ray spot LED çözümleri.</h2>
-          </div>
-          <p class="section-sub">Ray üzerinde yönlendirilebilir yapılarıyla vitrin, salon, ofis ve proje alanlarında modern aydınlatma sağlar. Görseller internet üzerinden çekilir.</p>
-        </div>
-
-        <div class="catalog-grid">
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.starakim.com/-20942-12-K.webp" alt="Cata CT-5315G siyah LED ray spot" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Ray Spot</span>
-              <h3>Cata CT-5315G 33W Venüs LED Ray Spot</h3>
-              <p>Siyah kasa, 3200K gün ışığı ve ayarlanabilir başlık yapısıyla mağaza, vitrin ve salon aydınlatması için uygundur.</p>
-              <div class="product-meta"><span>33W</span><span>3200K</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.starakim.com/-21406-12-K.webp" alt="Cata CT-5820 siyah manyetik spot" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Magnet Spot</span>
-              <h3>Cata CT-5820 12W Cortez Magnetic Spot</h3>
-              <p>Modern çizgili siyah manyetik spot tasarımıyla ofis, galeri, vitrin ve dekoratif iç mekanlarda kullanılabilir.</p>
-              <div class="product-meta"><span>12W</span><span>950 lm</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.starakim.com/-25081-13-K.jpg" alt="ACK siyah kasa COB LED ray spot" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">COB LED</span>
-              <h3>ACK AD30-01911 Siyah COB LED Ray Spot</h3>
-              <p>30W gücünde siyah kasa COB LED ray spot; odaklı ışık isteyen mağaza ve proje uygulamalarında tercih edilir.</p>
-              <div class="product-meta"><span>30W</span><span>4000K</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="catalog" id="avize-katalogu">
-      <div class="container reveal">
-        <div class="catalog-head">
-          <div>
-            <div class="section-label">Avizeler ve Sarkıt Aydınlatmalar</div>
-            <h2 class="section-title">Dekoratif iç mekan aydınlatma seçenekleri.</h2>
-          </div>
-          <p class="section-sub">Salon, mutfak, masa üstü ve kafe tarzı alanlarda kullanılabilecek modern sarkıt ve avize modelleri. Görseller internet üzerinden yüklenir.</p>
-        </div>
-
-        <div class="catalog-grid">
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.starakim.com/-12624-12-K.jpg" alt="Cata CT-8213 dekoratif siyah sarkıt avize" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Sarkıt</span>
-              <h3>Cata CT-8213 Dekoratif Sarkıt Armatür</h3>
-              <p>Siyah dış gövde ve sıcak iç yüzey tasarımıyla masa üstü, mutfak adası ve kafe konseptleri için şık görünüm sunar.</p>
-              <div class="product-meta"><span>E-27</span><span>Metal</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.starakim.com/-11528-12-K.jpg" alt="Cata CT-8250 dekoratif sarkıt altın serisi" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Altın Seri</span>
-              <h3>Cata CT-8250 Dekoratif Sarkıt Altın Serisi</h3>
-              <p>Zincir askılı ve siyah-gold detaylı tasarımıyla salon, restoran ve modern dekorasyon projelerine güçlü bir vurgu katar.</p>
-              <div class="product-meta"><span>E-27</span><span>40W</span></div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://www.starakim.com/-19794-12-K.jpg" alt="Cata CT-8250 dekoratif sarkıt ölçü görseli" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Ölçü Detayı</span>
-              <h3>Sarkıt Avize Ölçü Görünümü</h3>
-              <p>Proje sunumlarında ürünün yükseklik, çap ve kablo ölçülerini göstermek için kullanılabilecek teknik detay görseli.</p>
-              <div class="product-meta"><span>32 cm</span><span>100 cm</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="catalog" id="cata-populer-urunler">
-      <div class="container">
-        <div class="catalog-head reveal">
-          <div>
-            <div class="section-label">Cata</div>
-            <h2 class="section-title">Cata Popüler Ürünler</h2>
-          </div>
-          <p class="section-sub">Ray spot, bant armatür ve panel armatür gibi elektrik ve aydınlatma projelerinde sık tercih edilen Cata ürünleri.</p>
-        </div>
-        <div class="catalog-grid">
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://cdn.akakce.com/cata/cata-ct-5334-30w-ray-tipi-ledli-z.jpg" alt="Cata CT-5334 30W ray spot" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Ray Spot</span>
-              <h3>Cata CT-5334 30W Ray Spot</h3>
-              <p>Mağaza, vitrin, salon ve dekoratif aydınlatma uygulamaları için modern siyah kasa ray spot.</p>
-              <div class="product-meta"><span>30W</span><span>Ray Tipi</span></div>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://cdn.akakce.com/x/cata/cata-ct-2474-bant.jpg" alt="Cata CT-2474 bant armatür" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Bant Armatür</span>
-              <h3>Cata CT-2474 Bant Armatür</h3>
-              <p>Mutfak, tezgah altı, depo ve koridor aydınlatmalarında sade ve uzun formuyla kullanılan LED bant armatür.</p>
-              <div class="product-meta"><span>LED</span><span>İç Mekan</span></div>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://cdn.akakce.com/x/cata/ct-5145-6w-6500k-alm-panel-led-beyaz-12li-cata.jpg" alt="Cata CT-5145 LED panel" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Panel LED</span>
-              <h3>Cata CT-5145 LED Panel</h3>
-              <p>Alçıpan ve tavan uygulamalarında temiz görüntü sağlayan yuvarlak gömme LED panel.</p>
-              <div class="product-meta"><span>Panel</span><span>Gömme</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="catalog" id="noas-populer-urunler">
-      <div class="container">
-        <div class="catalog-head reveal">
-          <div>
-            <div class="section-label">Noas</div>
-            <h2 class="section-title">Noas Popüler Ürünler</h2>
-          </div>
-          <p class="section-sub">LED bant armatür, ray spot ve projektör seçenekleriyle iç ve dış mekan aydınlatma çözümleri.</p>
-        </div>
-        <div class="catalog-grid">
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://www.noas.com.tr/uploads/image/0388597f28a82c9843d1d6fb17fc29f8-1670914273205.jpg" alt="Noas 120 cm LED bant armatür" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Bant Armatür</span>
-              <h3>Noas 120 cm LED Bant Armatür</h3>
-              <p>Koridor, depo, mutfak ve iş yeri aydınlatmalarında kullanılan uzun gövdeli LED bant armatür.</p>
-              <div class="product-meta"><span>120 cm</span><span>LED</span></div>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://www.noas.com.tr/uploads/image/a27a78db209393ab8089a35604bd2115-1677835395675.png" alt="Noas 30W LED Ray Spot Paris" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Ray Spot</span>
-              <h3>Noas 30W LED Ray Spot Paris</h3>
-              <p>Vitrin, mağaza, kafe ve ev dekorasyonunda yönlendirilebilir ışık isteyen alanlar için ray spot çözümü.</p>
-              <div class="product-meta"><span>30W</span><span>Siyah Kasa</span></div>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://www.noas.com.tr/uploads/image/0a9732e4793255a9f372c52555867308-1763107124363.png" alt="Noas 100W Ultra Slim LED Projektör" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Projektör</span>
-              <h3>Noas 100W Ultra Slim LED Projektör</h3>
-              <p>Bahçe, dış cephe, tabela, depo ve açık alan aydınlatmaları için güçlü LED projektör.</p>
-              <div class="product-meta"><span>100W</span><span>IP66</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="catalog" id="viko-populer-urunler">
-      <div class="container">
-        <div class="catalog-head reveal">
-          <div>
-            <div class="section-label">Viko</div>
-            <h2 class="section-title">Viko Popüler Ürünler</h2>
-          </div>
-          <p class="section-sub">Karre ve Novella serilerinden ev, ofis ve ticari alanlarda sık kullanılan priz modelleri.</p>
-        </div>
-        <div class="catalog-grid">
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://cdn.akakce.com/x/viko/viko-karre-cerceveli-ikili-toprakli.jpg" alt="Viko Karre beyaz ikili topraklı priz" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Karre</span>
-              <h3>Viko Karre Beyaz İkili Topraklı Priz</h3>
-              <p>Modern beyaz görünümüyle konut ve ofislerde sık tercih edilen ikili sıva altı priz.</p>
-              <div class="product-meta"><span>İkili</span><span>Topraklı</span></div>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://cdn.akakce.com/x/viko/viko-90960708-karre-toprakli.jpg" alt="Viko Karre beyaz tekli topraklı priz" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Karre</span>
-              <h3>Viko Karre Beyaz Tekli Topraklı Priz</h3>
-              <p>Standart elektrik ihtiyaçları için sade, çerçeveli ve topraklı tekli priz modeli.</p>
-              <div class="product-meta"><span>Tekli</span><span>Beyaz</span></div>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://cdn.akakce.com/x/viko/viko-novella-antrasit-siva-alti-cerceveli-ikili-c-k-toprakli.jpg" alt="Viko Novella antrasit ikili topraklı priz" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Novella</span>
-              <h3>Viko Novella Antrasit İkili Priz</h3>
-              <p>Koyu renk dekorasyonlarda daha modern durması için antrasit gövdeli ikili priz seçeneği.</p>
-              <div class="product-meta"><span>Antrasit</span><span>İkili</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="catalog" id="ovivo-populer-urunler">
-      <div class="container">
-        <div class="catalog-head reveal">
-          <div>
-            <div class="section-label">Ovivo</div>
-            <h2 class="section-title">Ovivo Popüler Ürünler</h2>
-          </div>
-          <p class="section-sub">Grano ve xONE serilerinden beyaz, füme ve sıva üstü priz çözümleri.</p>
-        </div>
-        <div class="catalog-grid">
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://cdn.akakce.com/x/ovivo/ovivo-grano-beyaz-siva-alti-cerceveli-toprakli.jpg" alt="Ovivo Grano beyaz topraklı priz" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Grano</span>
-              <h3>Ovivo Grano Beyaz Topraklı Priz</h3>
-              <p>Ev ve iş yerlerinde sade görünüm isteyen projeler için çerçeveli beyaz sıva altı priz.</p>
-              <div class="product-meta"><span>Beyaz</span><span>Topraklı</span></div>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://cdn.akakce.com/x/ovivo/grano-beyaz-ikili-siva-alti-cerceveli-toprakli.jpg" alt="Ovivo Grano beyaz ikili topraklı priz" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Grano</span>
-              <h3>Ovivo Grano Beyaz İkili Topraklı Priz</h3>
-              <p>Yan yana iki priz ihtiyacı olan salon, mutfak ve ofis noktalarında kullanılabilecek ikili model.</p>
-              <div class="product-meta"><span>İkili</span><span>Sıva Altı</span></div>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <div class="product-img-wrap">
-              <img src="https://cdn.akakce.com/x/ovivo/ovivo-grano-toprakli-fume-cerceveli.jpg" alt="Ovivo Grano füme topraklı priz" loading="lazy">
-            </div>
-            <div class="product-content">
-              <span class="product-tag">Grano</span>
-              <h3>Ovivo Grano Füme Topraklı Priz</h3>
-              <p>Koyu ve modern iç mekanlarda kullanılan füme renkli çerçeveli topraklı priz.</p>
-              <div class="product-meta"><span>Füme</span><span>Çerçeveli</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="iletisim">
-      <div class="container contact-card reveal">
-        <div>
-          <div class="section-label">Bize Ulaşın</div>
-          <h2 class="section-title">Projenizi birlikte planlayalım.</h2>
-          <p class="section-sub" style="margin-top:14px">Elektrik, aydınlatma, solar enerji veya güvenlik sistemi ihtiyaçlarınız için iletişime geçin. Ücretsiz keşif ve fiyat teklifi için hızlı dönüş sağlanır.</p>
-          <div class="contact-info">
-            <div class="contact-item"><div class="contact-icon">📞</div><div><h4>Telefon</h4><a href="tel:05456074507">0545 607 4507</a></div></div>
-            <div class="contact-item"><div class="contact-icon">📸</div><div><h4>Instagram</h4><a href="https://www.instagram.com/harunelektrikaydinlatma00/" target="_blank" rel="noopener">@harunelektrikaydinlatma00</a></div></div>
-            <div class="contact-item"><div class="contact-icon">📍</div><div><h4>Hizmet Bölgesi</h4><p>Ereğli ve çevresi</p></div></div>
-          </div>
-        </div>
-        <aside class="quote-box">
-          <h3>Hızlı teklif alın</h3>
-          <p>WhatsApp üzerinden projenizi kısaca anlatın, uygun çözüm ve fiyatlandırma için iletişime geçelim.</p>
-          <a href="https://wa.me/905456074507?text=Merhaba, bilgi almak istiyorum." class="btn btn-whatsapp">WhatsApp'tan Yaz</a>
-          <a href="tel:05456074507" class="btn btn-outline" style="margin-top:12px;background:transparent;color:#fff;border-color:rgba(255,255,255,.28)">📞 Hemen Ara</a>
-        </aside>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">Elektrik • Aydınlatma • Solar • Güvenlik<span>Profesyonel Çözümler</span></div>
-      <div>© 2026 Tüm hakları saklıdır.</div>
+    <div class="product-row" id="cata-row">
+      <article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/cata/cata-ct-5334-30w-ray-tipi-ledli-z.jpg" alt="Cata CT-5334 30W Babil Ray Spot" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Ray Spot</span>
+    <h3>Cata CT-5334 30W Babil Ray Spot</h3>
+    <p>Vitrin, mağaza ve iç mekanlar için ray tipi LED armatür.</p>
+    <div class="product-meta"><span>30W</span><span>Ray</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.starakim.com/-20942-12-K.webp" alt="Cata CT-5395 36W Kama Ray Spot" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Ray Spot</span>
+    <h3>Cata CT-5395 36W Kama Ray Spot</h3>
+    <p>Odaklı aydınlatma isteyen alanlar için güçlü ray spot.</p>
+    <div class="product-meta"><span>36W</span><span>Kama</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.starakim.com/-21406-12-K.webp" alt="Cata CT-5396 40W Ray Spot" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Ray Spot</span>
+    <h3>Cata CT-5396 40W Ray Spot</h3>
+    <p>Yüksek ışık gücü isteyen ticari alanlar için.</p>
+    <div class="product-meta"><span>40W</span><span>LED</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.starakim.com/-25081-13-K.jpg" alt="Cata CT-5314 Karina Ray Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Ray Armatür</span>
+    <h3>Cata CT-5314 Karina Ray Armatür</h3>
+    <p>Modern ray sistemiyle dekoratif ve güçlü aydınlatma.</p>
+    <div class="product-meta"><span>33W</span><span>Karina</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.starakim.com/-12624-12-K.jpg" alt="Cata CT-5315 Venüs LED Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">LED Armatür</span>
+    <h3>Cata CT-5315 Venüs LED Armatür</h3>
+    <p>İç mekan genel aydınlatma için şık LED çözüm.</p>
+    <div class="product-meta"><span>33W</span><span>Venüs</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/cata/cata-ct-2474-bant.jpg" alt="Cata Bant Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Bant LED</span>
+    <h3>Cata Bant Armatür</h3>
+    <p>Dolap altı, tezgah ve çizgisel aydınlatma uygulamaları için.</p>
+    <div class="product-meta"><span>LED</span><span>Bant</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/cata/ct-5145-6w-6500k-alm-panel-led-beyaz-12li-cata.jpg" alt="Cata 6W Panel LED" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Panel</span>
+    <h3>Cata 6W Panel LED</h3>
+    <p>Kompakt alanlarda gömme panel LED aydınlatma.</p>
+    <div class="product-meta"><span>6W</span><span>Panel</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.starakim.com/-11528-12-K.jpg" alt="Cata Dekoratif LED Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Armatür</span>
+    <h3>Cata Dekoratif LED Armatür</h3>
+    <p>Ev ve ofislerde sade görünümlü LED armatür.</p>
+    <div class="product-meta"><span>LED</span><span>Dekoratif</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.starakim.com/-19794-12-K.jpg" alt="Cata Sensörlü Armatür" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Sensörlü</span>
+    <h3>Cata Sensörlü Armatür</h3>
+    <p>Koridor, merdiven ve ortak alanlar için sensörlü kullanım.</p>
+    <div class="product-meta"><span>Sensör</span><span>LED</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/cata/cata-ct-5334-30w-ray-tipi-ledli-z.jpg" alt="Cata CT-5333 Babil Ray Spot" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Ray Spot</span>
+    <h3>Cata CT-5333 Babil Ray Spot</h3>
+    <p>Ray aydınlatma sistemlerinde sık tercih edilen spot model.</p>
+    <div class="product-meta"><span>30W</span><span>Babil</span></div>
+  </div>
+</article>
     </div>
-  </footer>
+  </div>
+</section>
+<section class="catalog" id="noas">
+  <div class="container">
+    <div class="catalog-head reveal">
+      <div class="catalog-copy">
+        <div class="section-label">Panel, spot ve dekoratif LED seçenekleri</div>
+        <h2 class="section-title">Noas LED ürünleri</h2>
+        <p class="section-sub" style="margin-top:12px">İç mekan aydınlatmada çok kullanılan Noas ürünleri.</p>
+        <p class="catalog-note">Sağa sola kaydırarak ürünleri inceleyebilirsiniz. Her bölümde 10 ürün vardır.</p>
+      </div>
+      <div class="catalog-actions">
+        <button class="slide-btn" type="button" aria-label="Sola kaydır" data-target="noas-row" data-dir="-1">‹</button>
+        <button class="slide-btn" type="button" aria-label="Sağa kaydır" data-target="noas-row" data-dir="1">›</button>
+      </div>
+    </div>
+    <div class="product-row" id="noas-row">
+      <article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.noas.com.tr/uploads/image/829e805af412c86386da365027482d08-1669640787966.jpg" alt="Noas 3W LED Slim Panel" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Slim Panel</span>
+    <h3>Noas 3W LED Slim Panel</h3>
+    <p>Kompakt gömme aydınlatma için ince panel.</p>
+    <div class="product-meta"><span>3W</span><span>Panel</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.noas.com.tr/uploads/image/1c1ef274b01f17b2e92a5a8ae5008c35-1670243597329.jpg" alt="Noas 6+3W 3 Fonksiyonlu Panel" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">3 Fonksiyon</span>
+    <h3>Noas 6+3W 3 Fonksiyonlu Panel</h3>
+    <p>Farklı ışık fonksiyonlarıyla dekoratif panel.</p>
+    <div class="product-meta"><span>6+3W</span><span>LED</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.noas.com.tr/uploads/image/aca742a0796047cd0c7547554edbfc1a-1669793449650.jpg" alt="Noas 6W LED Slim Panel" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Slim Panel</span>
+    <h3>Noas 6W LED Slim Panel</h3>
+    <p>Ev ve ofis tavan uygulamaları için slim panel.</p>
+    <div class="product-meta"><span>6W</span><span>Yuvarlak</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.noas.com.tr/uploads/image/2893e2599fa80ed7bdca52423c05b3ce-1669796568868.jpg" alt="Noas 9W LED Slim Panel" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Slim Panel</span>
+    <h3>Noas 9W LED Slim Panel</h3>
+    <p>Daha yüksek ışık isteyen küçük alanlar için.</p>
+    <div class="product-meta"><span>9W</span><span>LED</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.noas.com.tr/uploads/image/54a06bc3ea6862a1dd1f4164b3101f38-1669799065367.jpg" alt="Noas 12W LED Slim Panel" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Slim Panel</span>
+    <h3>Noas 12W LED Slim Panel</h3>
+    <p>Salon, oda ve ofis tavanlarında kullanıma uygun.</p>
+    <div class="product-meta"><span>12W</span><span>Panel</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.noas.com.tr/uploads/image/c76b038de5649c3184c64098b29b5abb-1669799953879.jpg" alt="Noas 15W LED Slim Panel" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Slim Panel</span>
+    <h3>Noas 15W LED Slim Panel</h3>
+    <p>Geniş alanlarda daha güçlü panel ışık.</p>
+    <div class="product-meta"><span>15W</span><span>LED</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.noas.com.tr/uploads/image/1cf9ebc5c0845ec9becaa32a010deb63-1669800549462.jpg" alt="Noas 18W LED Slim Panel" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Slim Panel</span>
+    <h3>Noas 18W LED Slim Panel</h3>
+    <p>Yüksek ışık gücüyle tavan aydınlatması.</p>
+    <div class="product-meta"><span>18W</span><span>Panel</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.noas.com.tr/uploads/image/0388597f28a82c9843d1d6fb17fc29f8-1670914273205.jpg" alt="Noas LED Ray Spot" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Ray Spot</span>
+    <h3>Noas LED Ray Spot</h3>
+    <p>Ray sistemiyle yönlendirilebilir mağaza aydınlatması.</p>
+    <div class="product-meta"><span>Ray</span><span>LED</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.noas.com.tr/uploads/image/a27a78db209393ab8089a35604bd2115-1677835395675.png" alt="Noas Dekoratif LED" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Dekoratif</span>
+    <h3>Noas Dekoratif LED</h3>
+    <p>Dekoratif iç mekan aydınlatması için modern seçenek.</p>
+    <div class="product-meta"><span>Dekor</span><span>LED</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://www.noas.com.tr/uploads/image/0a9732e4793255a9f372c52555867308-1763107124363.png" alt="Noas Dış Mekan LED" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Dış Mekan</span>
+    <h3>Noas Dış Mekan LED</h3>
+    <p>Bahçe ve dış alan uygulamaları için dayanıklı aydınlatma.</p>
+    <div class="product-meta"><span>Outdoor</span><span>LED</span></div>
+  </div>
+</article>
+    </div>
+  </div>
+</section>
+<section class="catalog" id="viko">
+  <div class="container">
+    <div class="catalog-head reveal">
+      <div class="catalog-copy">
+        <div class="section-label">Karre, Novella ve Meridian ürünleri</div>
+        <h2 class="section-title">Viko anahtar ve priz serileri</h2>
+        <p class="section-sub" style="margin-top:12px">Ev tesisatlarında sık istenen Viko anahtar-priz modelleri.</p>
+        <p class="catalog-note">Sağa sola kaydırarak ürünleri inceleyebilirsiniz. Her bölümde 10 ürün vardır.</p>
+      </div>
+      <div class="catalog-actions">
+        <button class="slide-btn" type="button" aria-label="Sola kaydır" data-target="viko-row" data-dir="-1">‹</button>
+        <button class="slide-btn" type="button" aria-label="Sağa kaydır" data-target="viko-row" data-dir="1">›</button>
+      </div>
+    </div>
+    <div class="product-row" id="viko-row">
+      <article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/viko/viko-karre-cerceveli-ikili-toprakli.jpg" alt="Viko Karre İkili Topraklı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Karre</span>
+    <h3>Viko Karre İkili Topraklı Priz</h3>
+    <p>Çerçeveli beyaz ikili topraklı priz.</p>
+    <div class="product-meta"><span>İkili</span><span>Topraklı</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/viko/viko-90960708-karre-toprakli.jpg" alt="Viko Karre Topraklı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Karre</span>
+    <h3>Viko Karre Topraklı Priz</h3>
+    <p>Beyaz sıva altı topraklı priz modeli.</p>
+    <div class="product-meta"><span>Tekli</span><span>16A</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/viko/viko-novella-antrasit-siva-alti-cerceveli-ikili-c-k-toprakli.jpg" alt="Viko Novella Antrasit İkili Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Novella</span>
+    <h3>Viko Novella Antrasit İkili Priz</h3>
+    <p>Modern antrasit görünüm, ikili çerçeveli priz.</p>
+    <div class="product-meta"><span>Antrasit</span><span>İkili</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/viko/viko-karre-cerceveli-ikili-toprakli.jpg" alt="Viko Karre Beyaz Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Anahtar</span>
+    <h3>Viko Karre Beyaz Anahtar</h3>
+    <p>Sade beyaz tekli anahtar uygulaması.</p>
+    <div class="product-meta"><span>Tekli</span><span>Beyaz</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/viko/viko-90960708-karre-toprakli.jpg" alt="Viko Karre Komitatör" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Anahtar</span>
+    <h3>Viko Karre Komitatör</h3>
+    <p>Çift yönlü aydınlatma kontrolü için komitatör.</p>
+    <div class="product-meta"><span>Komitatör</span><span>Karre</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/viko/viko-karre-cerceveli-ikili-toprakli.jpg" alt="Viko Meridian Topraklı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Meridian</span>
+    <h3>Viko Meridian Topraklı Priz</h3>
+    <p>Meridian seri çocuk korumalı topraklı priz.</p>
+    <div class="product-meta"><span>Meridian</span><span>Priz</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/viko/viko-90960708-karre-toprakli.jpg" alt="Viko Karre Krem Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Karre</span>
+    <h3>Viko Karre Krem Anahtar</h3>
+    <p>Krem renkli klasik anahtar çözümü.</p>
+    <div class="product-meta"><span>Krem</span><span>Anahtar</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/viko/viko-novella-antrasit-siva-alti-cerceveli-ikili-c-k-toprakli.jpg" alt="Viko Karre Set" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Set</span>
+    <h3>Viko Karre Set</h3>
+    <p>Anahtar + priz set uygulamaları için.</p>
+    <div class="product-meta"><span>Set</span><span>Montaj</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/viko/viko-karre-cerceveli-ikili-toprakli.jpg" alt="Viko Karre Çerçeve" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Çerçeve</span>
+    <h3>Viko Karre Çerçeve</h3>
+    <p>Karre seri çerçeve ve mekanizma kombinasyonu.</p>
+    <div class="product-meta"><span>Çerçeve</span><span>Beyaz</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/viko/viko-90960708-karre-toprakli.jpg" alt="Viko İkili Anahtar Seti" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Set</span>
+    <h3>Viko İkili Anahtar Seti</h3>
+    <p>İkili anahtar ve priz kombinasyonu için uygun seçenek.</p>
+    <div class="product-meta"><span>İkili</span><span>Set</span></div>
+  </div>
+</article>
+    </div>
+  </div>
+</section>
+<section class="catalog" id="ovivo">
+  <div class="container">
+    <div class="catalog-head reveal">
+      <div class="catalog-copy">
+        <div class="section-label">Grano serisi popüler seçenekler</div>
+        <h2 class="section-title">Ovivo anahtar ve priz ürünleri</h2>
+        <p class="section-sub" style="margin-top:12px">Ekonomik ve şık anahtar-priz çözümleri.</p>
+        <p class="catalog-note">Sağa sola kaydırarak ürünleri inceleyebilirsiniz. Her bölümde 10 ürün vardır.</p>
+      </div>
+      <div class="catalog-actions">
+        <button class="slide-btn" type="button" aria-label="Sola kaydır" data-target="ovivo-row" data-dir="-1">‹</button>
+        <button class="slide-btn" type="button" aria-label="Sağa kaydır" data-target="ovivo-row" data-dir="1">›</button>
+      </div>
+    </div>
+    <div class="product-row" id="ovivo-row">
+      <article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/ovivo/ovivo-grano-beyaz-siva-alti-cerceveli-toprakli.jpg" alt="Ovivo Grano Beyaz Topraklı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Grano</span>
+    <h3>Ovivo Grano Beyaz Topraklı Priz</h3>
+    <p>Beyaz çerçeveli topraklı priz modeli.</p>
+    <div class="product-meta"><span>Beyaz</span><span>Topraklı</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/ovivo/grano-beyaz-ikili-siva-alti-cerceveli-toprakli.jpg" alt="Ovivo Grano Beyaz İkili Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Grano</span>
+    <h3>Ovivo Grano Beyaz İkili Priz</h3>
+    <p>İkili sıva altı çerçeveli priz.</p>
+    <div class="product-meta"><span>İkili</span><span>Beyaz</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/ovivo/ovivo-grano-toprakli-fume-cerceveli.jpg" alt="Ovivo Grano Füme Topraklı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Grano</span>
+    <h3>Ovivo Grano Füme Topraklı Priz</h3>
+    <p>Füme renk çerçeveli modern priz.</p>
+    <div class="product-meta"><span>Füme</span><span>Priz</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/ovivo/ovivo-grano-beyaz-siva-alti-cerceveli-toprakli.jpg" alt="Ovivo Grano Beyaz Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Anahtar</span>
+    <h3>Ovivo Grano Beyaz Anahtar</h3>
+    <p>Beyaz çerçeveli tekli anahtar.</p>
+    <div class="product-meta"><span>Beyaz</span><span>Anahtar</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/ovivo/ovivo-grano-toprakli-fume-cerceveli.jpg" alt="Ovivo Grano Füme Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Anahtar</span>
+    <h3>Ovivo Grano Füme Anahtar</h3>
+    <p>Füme renk modern anahtar çözümü.</p>
+    <div class="product-meta"><span>Füme</span><span>Anahtar</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/ovivo/grano-beyaz-ikili-siva-alti-cerceveli-toprakli.jpg" alt="Ovivo Grano Siyah Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Siyah</span>
+    <h3>Ovivo Grano Siyah Anahtar</h3>
+    <p>Siyah görünümlü şık anahtar modeli.</p>
+    <div class="product-meta"><span>Siyah</span><span>Anahtar</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/ovivo/ovivo-grano-beyaz-siva-alti-cerceveli-toprakli.jpg" alt="Ovivo Grano Priz + Anahtar Set" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Set</span>
+    <h3>Ovivo Grano Priz + Anahtar Set</h3>
+    <p>Ev tipi anahtar-priz set kurulumu için.</p>
+    <div class="product-meta"><span>Set</span><span>Montaj</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/ovivo/ovivo-grano-toprakli-fume-cerceveli.jpg" alt="Ovivo Grano Üçlü Anahtar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Üçlü</span>
+    <h3>Ovivo Grano Üçlü Anahtar</h3>
+    <p>Çoklu aydınlatma kontrolü için üçlü anahtar.</p>
+    <div class="product-meta"><span>Üçlü</span><span>Anahtar</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/ovivo/grano-beyaz-ikili-siva-alti-cerceveli-toprakli.jpg" alt="Ovivo Grano Çerçeve" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Çerçeve</span>
+    <h3>Ovivo Grano Çerçeve</h3>
+    <p>Grano seri çerçeve ve mekanizma kombinasyonu.</p>
+    <div class="product-meta"><span>Çerçeve</span><span>Grano</span></div>
+  </div>
+</article><article class="product-card reveal">
+  <div class="product-img-wrap"><img src="https://cdn.akakce.com/x/ovivo/ovivo-grano-beyaz-siva-alti-cerceveli-toprakli.jpg" alt="Ovivo Grano İkili Set" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27700%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23f8fafc%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%230f172a%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%3E%C3%9Cr%C3%BCn%20G%C3%B6rseli%3C/text%3E%3C/svg%3E';"></div>
+  <div class="product-content">
+    <span class="product-tag">Set</span>
+    <h3>Ovivo Grano İkili Set</h3>
+    <p>İkili priz ve anahtar set seçenekleri.</p>
+    <div class="product-meta"><span>İkili</span><span>Set</span></div>
+  </div>
+</article>
+    </div>
+  </div>
+</section>
+<section class="contact" id="iletisim">
+<div class="container contact-card reveal">
+<div>
+<div class="section-label">Bize Ulaşın</div>
+<h2 class="section-title">Projenizi birlikte planlayalım.</h2>
+<p class="section-sub" style="margin-top:14px">Elektrik, aydınlatma, solar enerji veya güvenlik sistemi ihtiyaçlarınız için iletişime geçin. Ücretsiz keşif ve fiyat teklifi için hızlı dönüş sağlanır.</p>
+<div class="contact-info">
+<div class="contact-item"><div class="contact-icon">📞</div><div><h4>Telefon</h4><a href="tel:05456074507">0545 607 4507</a></div></div>
+<div class="contact-item"><div class="contact-icon">📸</div><div><h4>Instagram</h4><a href="https://www.instagram.com/harunelektrikaydinlatma00/" rel="noopener" target="_blank">@harunelektrikaydinlatma00</a></div></div>
+<div class="contact-item"><div class="contact-icon">📍</div><div><h4>Hizmet Bölgesi</h4><p>Ereğli ve çevresi</p></div></div>
+</div>
+</div>
+<aside class="quote-box">
+<h3>Hızlı teklif alın</h3>
+<p>WhatsApp üzerinden projenizi kısaca anlatın, uygun çözüm ve fiyatlandırma için iletişime geçelim.</p>
+<a class="btn btn-whatsapp" href="https://wa.me/905456074507?text=Merhaba, bilgi almak istiyorum.">WhatsApp'tan Yaz</a>
+<a class="btn btn-outline" href="tel:05456074507" style="margin-top:12px;background:transparent;color:#fff;border-color:rgba(255,255,255,.28)">📞 Hemen Ara</a>
+</aside>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-inner">
+<div class="footer-brand">Elektrik • Aydınlatma • Solar • Güvenlik<span>Profesyonel Çözümler</span></div>
+<div>© 2026 Tüm hakları saklıdır.</div>
+</div>
+</footer>
+<a aria-label="WhatsApp ile iletişime geç" class="wa-float" href="https://wa.me/905456074507?text=Merhaba, bilgi almak istiyorum." rel="noopener" target="_blank">
+<svg aria-hidden="true" fill="white" height="29" viewbox="0 0 24 24" width="29"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+</a>
+<script>
+    
+    document.querySelectorAll('.slide-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const row = document.getElementById(button.dataset.target);
+        if (!row) return;
+        const dir = Number(button.dataset.dir || 1);
+        row.scrollBy({ left: dir * Math.min(900, row.clientWidth * 0.9), behavior: 'smooth' });
+      });
+    });
 
-  <a class="wa-float" href="https://wa.me/905456074507?text=Merhaba, bilgi almak istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp ile iletişime geç">
-    <svg width="29" height="29" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
-  </a>
-
-  <script>
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
