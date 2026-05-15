@@ -599,7 +599,48 @@
       background: var(--surface-2);
     }
     .location-actions { display: flex; gap: 10px; flex-wrap: wrap; padding: 0 4px 4px; }
-</style>
+
+    .ovivo-simple-content { padding: 18px 18px 22px; }
+    .ovivo-simple-content h3 { margin-bottom: 0; font-size: 1.02rem; }
+    .ovivo-heavy .product-img-wrap { background: #fff; }
+
+
+    /* Ovivo Mina / Loft: başlıklar görsele yapışmasın diye alt boşluk düzeltmesi */
+    .ovivo-heavy .catalog-head {
+      margin-bottom: 28px;
+    }
+    .ovivo-heavy .section-label {
+      margin-bottom: 14px;
+    }
+    .ovivo-heavy .section-title {
+      margin-top: 0;
+      padding-top: 4px;
+    }
+    .ovivo-simple-card {
+      min-height: 330px;
+    }
+    .ovivo-simple-card .product-img-wrap {
+      height: 225px;
+      padding: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .ovivo-simple-content {
+      padding: 30px 18px 26px !important;
+      justify-content: flex-start;
+    }
+    .ovivo-simple-content h3 {
+      margin-top: 8px;
+      margin-bottom: 0;
+      line-height: 1.35;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 700px) {
+      .ovivo-simple-card .product-img-wrap { height: 195px; }
+      .ovivo-simple-content { padding-top: 26px !important; }
+    }
+
+  </style>
 </head>
 <body>
 <div class="topbar">
@@ -1064,111 +1105,216 @@
 </div>
 </div>
 </section>
-<section class="catalog" id="ovivo">
+<section class="catalog ovivo-heavy" id="ovivo-mina">
 <div class="container">
 <div class="catalog-head reveal">
 <div>
 <div class="section-label">Ovivo Kataloğu</div>
-<h2 class="section-title">Ovivo anahtar, modern kontrol ve bağlantı ürünleri</h2>
-<p class="section-sub" style="margin-top:12px">Ovivo bölümünde artık sadece ışık düğmesi değil; xOne sıva üstü prizler, kapaklı prizler, Cat6 data, TV/uydu prizi, USB data modülü ve Quantum dekoratif çerçeve çeşitleri yer alıyor.</p>
+<h2 class="section-title">Ovivo Mina</h2>
 </div>
 <div class="scroll-buttons">
-<button aria-label="Sola kaydır" class="scroll-btn" onclick="scrollProducts('ovivo-row', -1)" type="button">‹</button>
-<button aria-label="Sağa kaydır" class="scroll-btn" onclick="scrollProducts('ovivo-row', 1)" type="button">›</button>
+<button aria-label="Sola kaydır" class="scroll-btn" onclick="scrollProducts('ovivo-mina-row', -1)" type="button">‹</button>
+<button aria-label="Sağa kaydır" class="scroll-btn" onclick="scrollProducts('ovivo-mina-row', 1)" type="button">›</button>
 </div>
 </div>
-<div class="product-row" id="ovivo-row">
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo xOne Gri İkili Topraklı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ateraydinlatma.com/idea/nc/67/myassets/products/298/406-240000-907.png?revision=1723457097"/></div>
-<div class="product-content">
-<span class="product-tag">Sıva Üstü Priz</span>
-<h3>Ovivo xOne Gri İkili Topraklı Priz</h3>
-<p>xOne serisinden iki çıkışlı sıva üstü topraklı priz; ofis, depo ve tadilat işleri için pratik çözüm.</p>
-<div class="product-meta"><span>İkili</span><span>Sıva Üstü</span></div>
+<div class="product-row" id="ovivo-mina-row">
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-01" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_100200_200_anahtar___g%C3%BCm%C3%BC%C5%9F7_12_2018_10_26.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-01</h3>
 </div>
 </article>
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo xOne Gri Kapaklı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ateraydinlatma.com/idea/nc/67/myassets/products/297/406-240000-249.png?revision=1723457210"/></div>
-<div class="product-content">
-<span class="product-tag">Kapaklı Priz</span>
-<h3>Ovivo xOne Gri Kapaklı Priz</h3>
-<p>Kapaklı yapısıyla balkon, giriş ve nem riski olan alanlarda tercih edilen sıva üstü priz modeli.</p>
-<div class="product-meta"><span>Kapaklı</span><span>Priz</span></div>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-02" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_110200_200_anahtar___f%C3%BCme7_12_2018_10_30.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-02</h3>
 </div>
 </article>
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo xOne Antrasit Topraklı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ateraydinlatma.com/idea/nc/67/myassets/products/240/ovivo-xone-sivaustu-toprakli-priz-antrasit.jpg?revision=1740575136"/></div>
-<div class="product-content">
-<span class="product-tag">Modern Priz</span>
-<h3>Ovivo xOne Antrasit Topraklı Priz</h3>
-<p>Antrasit rengiyle modern dekorasyonlara uyan tekli sıva üstü topraklı priz.</p>
-<div class="product-meta"><span>Antrasit</span><span>Topraklı</span></div>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-03" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_120200_200_anahtar___titanyum7_12_2018_10_34.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-03</h3>
 </div>
 </article>
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo xOne Antrasit Light Anahtarı" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ateraydinlatma.com/idea/nc/67/myassets/products/301/406-250000-205.png?revision=1772606759"/></div>
-<div class="product-content">
-<span class="product-tag">Light Anahtar</span>
-<h3>Ovivo xOne Antrasit Light Anahtarı</h3>
-<p>Işıklı göstergeli anahtar ihtiyacı olan yerlerde kullanılan xOne serisi modern anahtar.</p>
-<div class="product-meta"><span>Işıklı</span><span>Anahtar</span></div>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-04" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_130200_200_anahtar___antrasit7_12_2018_10_39.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-04</h3>
 </div>
 </article>
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo xOne Beyaz Kapaklı Priz" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ateraydinlatma.com/idea/nc/67/myassets/products/236/ovivo-xone-sivaustu-kapakli-toprakli-priz-beyaz.jpg?revision=1740574228"/></div>
-<div class="product-content">
-<span class="product-tag">Dış Mekan Priz</span>
-<h3>Ovivo xOne Beyaz Kapaklı Priz</h3>
-<p>Kapaklı beyaz gövdesiyle bina girişi, balkon ve servis alanlarında kullanılabilen yeni seri priz.</p>
-<div class="product-meta"><span>Beyaz</span><span>Kapaklı</span></div>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-05" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_010200_200_anahtar7_12_2018_11_12.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-05</h3>
 </div>
 </article>
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo Quantum Cat6 Data Prizi" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/34/222-222/10447757672498.jpg"/></div>
-<div class="product-content">
-<span class="product-tag">Data Prizi</span>
-<h3>Ovivo Quantum Cat6 Data Prizi</h3>
-<p>İnternet ve ağ bağlantısı için kullanılan RJ45/Cat6 data prizi; modem ve bilgisayar hatları için uygun.</p>
-<div class="product-meta"><span>Cat6</span><span>RJ45</span></div>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-06" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_010200_201_%C4%B1%C5%9F%C4%B1kl%C4%B1_anahtar7_12_2018_11_15.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-06</h3>
 </div>
 </article>
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo Quantum TV / Uydu Prizi" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/777/222-222/110001554413918.jpg"/></div>
-<div class="product-content">
-<span class="product-tag">TV Prizi</span>
-<h3>Ovivo Quantum TV / Uydu Prizi</h3>
-<p>TV ve uydu kablosunu duvarda düzenli göstermek için kullanılan modern siyah TV prizi.</p>
-<div class="product-meta"><span>TV</span><span>Uydu</span></div>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-07" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_010200_202_kom%C3%BCtat%C3%B6r7_12_2018_11_18.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-07</h3>
 </div>
 </article>
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo Grano Füme USB Data Prizi" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://productimages.hepsiburada.net/s/401/222-222/110000426968924.jpg"/></div>
-<div class="product-content">
-<span class="product-tag">USB Data</span>
-<h3>Ovivo Grano Füme USB Data Prizi</h3>
-<p>USB bağlantı noktasıyla telefon, medya cihazı veya veri aktarımı için kullanılan modern duvar modülü.</p>
-<div class="product-meta"><span>USB</span><span>Data</span></div>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-08" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_010200_203___%C4%B1%C5%9F%C4%B1kl%C4%B1_kom%C3%BCtat%C3%B6r7_12_2018_11_22.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-08</h3>
 </div>
 </article>
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo Quantum Manyetik Gri Üçlü Çerçeve" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ateraydinlatma.com/idea/nc/67/myassets/products/057/ovivo-quantum-manyetik-gri-uclu-cerceve-405-310000-227.jpg?revision=1709217722"/></div>
-<div class="product-content">
-<span class="product-tag">Çerçeve</span>
-<h3>Ovivo Quantum Manyetik Gri Üçlü Çerçeve</h3>
-<p>Üçlü anahtar veya priz kombinasyonu oluşturmak için kullanılan manyetik gri dekoratif çerçeve.</p>
-<div class="product-meta"><span>Üçlü</span><span>Quantum</span></div>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-09" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_010200_204____kap%C4%B1_otomati%C4%9Fi7_12_2018_11_25.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-09</h3>
 </div>
 </article>
-<article class="product-card reveal">
-<div class="product-img-wrap"><img alt="Ovivo Quantum Siyah Tekli Çerçeve" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://images.elektrikciden.com/ovivo-quantum-tekli-cerceve-siyah-3594124-66-O.webp"/></div>
-<div class="product-content">
-<span class="product-tag">Çerçeve</span>
-<h3>Ovivo Quantum Siyah Tekli Çerçeve</h3>
-<p>Siyah modern tasarımlı tekli çerçeve; priz, anahtar, data veya TV modülüyle kombinlenebilir.</p>
-<div class="product-meta"><span>Siyah</span><span>Tekli</span></div>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-10" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_010200_205_light_anahtar7_12_2018_11_28.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-10</h3>
 </div>
 </article>
-</div></div>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-11" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_010200_206___%C4%B1%C5%9F%C4%B1kl%C4%B1_light7_12_2018_11_33.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-11</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-12" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_010200_207_________zil_anahtar%C4%B17_12_2018_11_37.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-12</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-13" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_010200_209_vavien7_12_2018_11_57.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-13</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-14" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_010200_210_____%C4%B1%C5%9F%C4%B1kl%C4%B1_vavien7_12_2018_11_59.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-14</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Mina-15" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/401_010200_211_kom%C3%BCtat%C3%B6r_vavien7_12_2018_12_02.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Mina-15</h3>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="catalog ovivo-heavy" id="ovivo-loft">
+<div class="container">
+<div class="catalog-head reveal">
+<div>
+<div class="section-label">Ovivo Kataloğu</div>
+<h2 class="section-title">Ovivo Loft</h2>
+</div>
+<div class="scroll-buttons">
+<button aria-label="Sola kaydır" class="scroll-btn" onclick="scrollProducts('ovivo-loft-row', -1)" type="button">‹</button>
+<button aria-label="Sağa kaydır" class="scroll-btn" onclick="scrollProducts('ovivo-loft-row', 1)" type="button">›</button>
+</div>
+</div>
+<div class="product-row" id="ovivo-loft-row">
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-01" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_010001_096_tekli_%C3%A7er%C3%A7eve___beyaz7_12_2018_08_36.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-01</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-02" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_010003_0967_12_2018_08_40.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-02</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-03" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_010006_096_tekli_%C3%A7er%C3%A7eve__beyaz_kese_ka%C4%9F%C4%B1d%C4%B17_12_2018_08_46.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-03</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-04" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_010008_0967_12_2018_08_49.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-04</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-05" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_020002_096_tekli_%C3%A7er%C3%A7eve___krem7_12_2018_08_52.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-05</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-06" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_050005_096_tekli_%C3%A7er%C3%A7eve___gri6_12_2018_17_07.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-06</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-07" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_060006_096_tekli_%C3%A7er%C3%A7eve___kese_ka%C4%9F%C4%B1d%C4%B16_12_2018_17_13.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-07</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-08" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_080008_096_tekli_%C3%A7er%C3%A7eve___siyah6_12_2018_17_15.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-08</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-09" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_110008_096_tekli_%C3%A7er%C3%A7eve___f%C3%BCme7_12_2018_09_01.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-09</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-10" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_110011_096_tekli_%C3%A7er%C3%A7eve___f%C3%BCme7_12_2018_09_11.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-10</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-11" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_130008_096_tekli_%C3%A7er%C3%A7eve___antrasit7_12_2018_09_21.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-11</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-12" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_130008_097_tekli_%C3%A7er%C3%A7eve_plus___antrasit7_12_2018_09_40.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-12</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-13" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_130013_096_tekli_%C3%A7er%C3%A7eve___antrasit7_12_2018_09_43.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-13</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-14" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_170017_096_tekli_%C3%A7er%C3%A7eve___metalik_siyah7_12_2018_09_49.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-14</h3>
+</div>
+</article>
+<article class="product-card reveal ovivo-simple-card">
+<div class="product-img-wrap"><img alt="Ovivo Loft-15" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27900%27 height=%27700%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%230f172a%27 font-family=%27Arial%27 font-size=%2730%27 font-weight=%27700%27%3EGörsel yüklenemedi%3C/text%3E%3C/svg%3E';" src="https://www.ovivoelektrik.com.tr/File/Product/404_180008_096_tekli_%C3%A7er%C3%A7eve___metalik_beyaz7_12_2018_09_53.jpg"/></div>
+<div class="product-content ovivo-simple-content">
+<h3>Loft-15</h3>
+</div>
+</article>
+</div>
 </div>
 </section>
 <section class="contact" id="iletisim">
