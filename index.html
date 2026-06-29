@@ -506,25 +506,70 @@
       .ovivo-simple-card .product-img-wrap { height: 195px; }
     }
   
-.site-banner{
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  color:#fff;
-  padding:16px 20px;
-  text-align:center;
+.site-banner {
+  background: linear-gradient(135deg, #090e1a 0%, #152238 100%);
+  color: #fff;
+  padding: 14px 24px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
-.site-banner p{
-  margin:0 0 12px 0;
-  font-weight:700;
-  font-size:1.05rem;
+.site-banner-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.site-banner a{
-  display:inline-block;
-  background:#25D366;
-  color:#fff;
-  padding:12px 22px;
-  border-radius:999px;
-  font-weight:800;
-  text-decoration:none;
+.site-banner-badge {
+  background: linear-gradient(135deg, #f6d36f, #c7952f);
+  color: #090e1a;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: 0 2px 10px rgba(199, 149, 47, 0.3);
+}
+.site-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.site-banner-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.4);
+  background: #20ba59;
+}
+.site-banner-btn svg {
+  animation: bannerPulse 1.8s infinite ease-in-out;
+}
+@keyframes bannerPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+@media (max-width: 600px) {
+  .site-banner { flex-direction: column; gap: 10px; padding: 12px 16px; }
+  .site-banner-text { font-size: 0.82rem; text-align: center; justify-content: center; }
+  .site-banner-btn { width: 100%; justify-content: center; }
 }
 
 </style>
@@ -532,9 +577,16 @@
 <body>
 
 <div class="site-banner">
-  <p>💻 Site ihtiyacınız varsa bana yazın</p>
-  <a href="https://wa.me/905427756734?text=Merhaba,%20site%20ihtiyacım%20var." target="_blank">
-    WhatsApp'tan Yazın
+  <div class="site-banner-text">
+    <span class="site-banner-badge">DevByMu</span>
+    <span>⚡ <strong>Tasarımı Beğendiniz mi?</strong> Siz de işletmeniz için böyle havalı ve hızlı bir web sitesi yaptırabilirsiniz.</span>
+  </div>
+  <a class="site-banner-btn" href="https://wa.me/905427756734?text=Merhaba,%20Harun%20Elektrik%20tasarımınızı%20gördüm%20ve%20ben%20de%20benzer%20bir%20web%20sitesi%20yaptırmak%20istiyorum." target="_blank">
+    <!-- WhatsApp SVG Logosu -->
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.863-9.847.001-2.63-1.019-5.101-2.871-6.957C16.611 1.996 14.14 1.07 11.516 1.07c-5.44 0-9.866 4.415-9.869 9.851-.001 1.778.475 3.51 1.374 5.042L2.038 22l6.109-1.603c1.52.83 3.111 1.266 4.5 1.266zM17.51 16.3c-.277-.139-1.64-.809-1.895-.9-.256-.092-.443-.139-.629.139-.186.278-.722.9-.885 1.082-.163.186-.329.21-.605.071-.276-.139-1.168-.43-2.226-1.374-.823-.733-1.378-1.639-1.54-1.917-.163-.277-.017-.427.121-.565.125-.124.277-.324.416-.486.139-.162.186-.278.278-.463.092-.186.046-.349-.023-.487-.069-.139-.629-1.514-.862-2.074-.227-.546-.477-.473-.654-.482-.169-.008-.363-.01-.557-.01-.194 0-.51.073-.778.364-.268.291-1.02.997-1.02 2.431s1.042 2.82 1.187 3.016c.145.196 2.052 3.134 4.971 4.39.694.299 1.237.478 1.661.612.698.222 1.334.191 1.838.116.56-.083 1.64-.67 1.871-1.319.23-.647.23-1.203.161-1.319-.069-.115-.256-.185-.533-.324z"/>
+    </svg>
+    Ben de Yaptırmak İstiyorum →
   </a>
 </div>
 
